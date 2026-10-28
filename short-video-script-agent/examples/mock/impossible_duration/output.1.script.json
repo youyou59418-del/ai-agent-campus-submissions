@@ -1,0 +1,11 @@
+{
+  "task_status": "UNFULFILLED",
+  "script": null,
+  "risks": [
+    {
+      "code": "DURATION_EXCEEDED",
+      "draft_id": "D1",
+      "detail": "exceeds target by 7 seconds"
+    }
+  ]
+}

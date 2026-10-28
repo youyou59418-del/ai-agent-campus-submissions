@@ -1,0 +1,293 @@
+{
+  "mode": "live",
+  "total_cases": 13,
+  "passed": 13,
+  "cases": [
+    {
+      "case": "normal",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 5,
+          "draft_count": 1,
+          "draft_id": "83b0921c-d5b3-433d-bbbc-815f0ed3e5b7",
+          "suggested_slot": "2026-11-02T17:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "missing",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "NEEDS_INFO",
+          "actual": "NEEDS_INFO",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 4,
+          "draft_count": 0,
+          "draft_id": null,
+          "suggested_slot": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "blocked",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "BLOCKED",
+          "actual": "BLOCKED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 3,
+          "draft_count": 0,
+          "draft_id": null,
+          "suggested_slot": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "risk_review",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "NEEDS_REVIEW",
+          "actual": "NEEDS_REVIEW",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 5,
+          "draft_count": 0,
+          "draft_id": null,
+          "suggested_slot": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "conflict",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 6,
+          "draft_count": 1,
+          "draft_id": "8ca9e524-9935-40a7-9cf0-d4583ae6001e",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 6,
+          "draft_count": 1,
+          "draft_id": "2019c086-d7d6-46b5-845d-ba81f011ada9",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "model_error": null
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 5,
+          "draft_count": 1,
+          "draft_id": "2019c086-d7d6-46b5-845d-ba81f011ada9",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "save_failure",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "SAVE_FAILED",
+          "actual": "SAVE_FAILED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 5,
+          "draft_count": 0,
+          "draft_id": null,
+          "suggested_slot": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "supplement",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 6,
+          "draft_count": 1,
+          "draft_id": "770e4e52-4f52-42ff-83d8-f3fc1771c973",
+          "suggested_slot": "2026-11-02T17:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "confirmed",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 6,
+          "draft_count": 1,
+          "draft_id": "442dbfc0-e011-481b-bca2-2ad326e2fdb9",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "changed_occupancy",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 6,
+          "draft_count": 1,
+          "draft_id": "4cf663a3-0715-43d0-b69f-ea461266b752",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "model_error": null
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 6,
+          "draft_count": 1,
+          "draft_id": "4cf663a3-0715-43d0-b69f-ea461266b752",
+          "suggested_slot": "2026-11-02T20:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "step_limit",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "INCOMPLETE",
+          "actual": "INCOMPLETE",
+          "status": "INCOMPLETE",
+          "termination": "STEP_LIMIT",
+          "steps": 1,
+          "draft_count": 0,
+          "draft_id": null,
+          "suggested_slot": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "no_slots",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "NO_AVAILABLE_SLOT",
+          "actual": "NO_AVAILABLE_SLOT",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 5,
+          "draft_count": 0,
+          "draft_id": null,
+          "suggested_slot": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "multi",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "expected": "DRAFT_SAVED",
+          "actual": "DRAFT_SAVED",
+          "status": "COMPLETED",
+          "termination": "FINISHED",
+          "steps": 11,
+          "draft_count": 2,
+          "draft_id": "da8c250b-728c-4304-85ba-e3a665f1c508",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "model_error": null
+        }
+      ]
+    }
+  ]
+}

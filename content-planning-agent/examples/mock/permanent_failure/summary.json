@@ -1,0 +1,25 @@
+{
+  "case": "permanent_failure",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "failure_not_saved": true
+      },
+      "actual": "INCOMPLETE",
+      "termination": "FINISHED",
+      "strategy": "economy",
+      "spent_units": "6.00",
+      "steps": 15,
+      "plan_id": null,
+      "model_error": null
+    }
+  ]
+}

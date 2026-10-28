@@ -1,0 +1,11 @@
+{
+  "request_id": "case-save-failure",
+  "items": [
+    {
+      "material_id": "M01",
+      "requested_slot": "2026-11-02T17:00:00+08:00",
+      "hard_requirement": true,
+      "channel": "xiaoying"
+    }
+  ]
+}

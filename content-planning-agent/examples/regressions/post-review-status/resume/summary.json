@@ -1,0 +1,49 @@
+{
+  "case": "resume",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "failed_attempt_retained": true,
+        "successful_search_not_reexecuted": true
+      },
+      "actual": "INCOMPLETE",
+      "termination": "INTERRUPTED_AFTER_FAILURE",
+      "strategy": "premium",
+      "spent_units": "3.00",
+      "steps": 4,
+      "plan_id": null,
+      "model_error": null
+    },
+    {
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "deadline_not_exceeded": true,
+        "save_matches_spent": true,
+        "failed_attempt_retained": true,
+        "successful_search_not_reexecuted": true,
+        "kept_first_attempts": true,
+        "replanned_after_failure": true
+      },
+      "actual": "COMPLETED",
+      "termination": "FINISHED",
+      "strategy": "economy",
+      "spent_units": "9.00",
+      "steps": 6,
+      "plan_id": "009ac8ab-3b70-4171-8039-b25b4ad8a110",
+      "model_error": null
+    }
+  ]
+}

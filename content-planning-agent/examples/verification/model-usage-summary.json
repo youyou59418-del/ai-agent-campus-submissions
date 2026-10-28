@@ -1,0 +1,10 @@
+{
+  "scope": "current_acceptance_traces",
+  "model": "qwen3.8-27b",
+  "usage": {
+    "api_calls": 95,
+    "prompt_tokens": 255859,
+    "completion_tokens": 3603
+  },
+  "boundary": "当前验收记录的 API 返回用量；不含历史业务回归，不等于账户总用量或免费计费判断。"
+}

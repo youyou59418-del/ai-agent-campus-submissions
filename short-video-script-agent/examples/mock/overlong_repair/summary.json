@@ -1,0 +1,26 @@
+{
+  "case": "overlong_repair",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "never_published": true,
+        "duration_within_target": true,
+        "scene_time_sum": true,
+        "has_source_citation": true,
+        "no_invented_performance_fact": true,
+        "observed_initial_38": true,
+        "actually_revised": true
+      },
+      "task_status": "SCRIPT_READY",
+      "steps": 7,
+      "model_error": null,
+      "estimated_total_seconds": 28
+    }
+  ]
+}

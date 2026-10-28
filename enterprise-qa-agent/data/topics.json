@@ -1,0 +1,9 @@
+{
+  "notice": "Manually curated synthetic topic/synonym rules; not a general semantic entailment model.",
+  "topics": {
+    "expense.deadline": {"label": "费用报销期限", "anchors": ["报销", "报账", "票据", "发票"], "relations": ["期限", "时限", "多久", "几天", "多少天", "最晚", "最迟", "啥时", "什么时候", "何时", "截止"], "canonical_query": "费用报销期限", "claim_type": "quantity"},
+    "leave.notice": {"label": "年假申请提前时间", "anchors": ["年假", "请假", "休假"], "relations": ["提前", "多久", "几天", "多少天", "什么时候"], "canonical_query": "年假申请提前工作日", "claim_type": "quantity"},
+    "product.export": {"label": "产品离线导出", "anchors": ["导出", "导报告", "导文件"], "relations": ["离线", "没网", "断网", "脱网", "没有网络"], "canonical_query": "产品离线导出专业版", "claim_type": "text"},
+    "it.reset": {"label": "企业密码重置", "anchors": ["密码", "口令"], "relations": ["重置", "忘记", "忘了", "找回", "修改"], "canonical_query": "企业账号密码重置找回", "claim_type": "text"}
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "generated_at_utc": "2026-10-28T11:50:27.071417+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mock_boundary": null,
+  "input": {
+    "request_id": "case-supplement",
+    "items": [
+      {
+        "material_id": "M07",
+        "requested_slot": "2026-11-02T17:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M07",
+        "include_supplement": false,
+        "reason": "读取素材 M07 基础信息以开始审核"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": true
+      },
+      "decision_basis": "读取素材 M07 基础信息以开始审核",
+      "next_action": "read_material"
+    },
+    {
+      "step": 2,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M07",
+        "include_supplement": true,
+        "reason": "标题缺失，补查补充资料"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "从素材库补查到的标题",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": true,
+        "supplement_available": true
+      },
+      "decision_basis": "标题缺失，补查补充资料",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 3,
+      "model": "qwen3.8-27b",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M07",
+        "reason": "补查后重新审核规则"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "APPROVED",
+        "findings": [],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "补查后重新审核规则",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 4,
+      "model": "qwen3.8-27b",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M07",
+        "include_alternatives": false,
+        "reason": "审核通过，检查原定时间 2026-11-02T17:00"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T17:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "审核通过，检查原定时间 2026-11-02T17:00",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "model": "qwen3.8-27b",
+      "tool": "save_draft",
+      "arguments": {
+        "material_id": "M07",
+        "slot": "2026-11-02T17:00:00+08:00",
+        "reason": "原定时间可用，保存草稿"
+      },
+      "observation": {
+        "ok": true,
+        "code": "SAVED",
+        "draft": {
+          "draft_id": "770e4e52-4f52-42ff-83d8-f3fc1771c973",
+          "request_id": "case-supplement",
+          "material_id": "M07",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T17:00:00+08:00",
+          "suggested_slot": "2026-11-02T17:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": false,
+          "status": "READY_DRAFT",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        }
+      },
+      "decision_basis": "原定时间可用，保存草稿",
+      "next_action": "finish"
+    },
+    {
+      "step": 6,
+      "model": "qwen3.8-27b",
+      "tool": "finish",
+      "arguments": {
+        "reason": "M07 已保存草稿，所有素材处理完毕"
+      },
+      "observation": {
+        "ok": true,
+        "code": "FINISHED"
+      },
+      "decision_basis": "M07 已保存草稿，所有素材处理完毕",
+      "next_action": "FINISHED"
+    }
+  ],
+  "result": {
+    "request_id": "case-supplement",
+    "status": "COMPLETED",
+    "termination": "FINISHED",
+    "items": [
+      {
+        "material_id": "M07",
+        "review_status": "APPROVED",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T17:00:00+08:00",
+        "suggested_slot": "2026-11-02T17:00:00+08:00",
+        "pending_items": [],
+        "outcome": "DRAFT_SAVED",
+        "draft_save_status": "SAVED",
+        "draft": {
+          "draft_id": "770e4e52-4f52-42ff-83d8-f3fc1771c973",
+          "request_id": "case-supplement",
+          "material_id": "M07",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T17:00:00+08:00",
+          "suggested_slot": "2026-11-02T17:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": false,
+          "status": "READY_DRAFT",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        },
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 6,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_seconds": 11.438
+  },
+  "usage": {
+    "prompt_tokens": 9039,
+    "completion_tokens": 352,
+    "api_calls": 6
+  },
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "user-selected model; stop on quota error; console free-only state unverified"
+}

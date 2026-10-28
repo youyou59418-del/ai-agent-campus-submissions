@@ -1,0 +1,14 @@
+{
+  "record_type": "initial_implementation_window",
+  "observed_start_utc": "2026-10-28T11:08:33+00:00",
+  "recorded_at_utc": "2026-10-28T11:59:48.807402+00:00",
+  "elapsed_wall_seconds": 3076,
+  "timing_basis": "工具日志记录的 AI 辅助工程窗口，包含构建、验证与等待；不含窗口前需求讨论。",
+  "human_operation_time": "人工操作时间未单独计时。",
+  "validation_snapshot": {
+    "unit_tests": 58,
+    "offline_cases": "13/13",
+    "live_cases": "13/13",
+    "live_trace_runs": 15
+  }
+}

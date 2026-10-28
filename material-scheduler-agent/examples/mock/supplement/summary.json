@@ -1,0 +1,20 @@
+{
+  "case": "supplement",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "expected": "DRAFT_SAVED",
+      "actual": "DRAFT_SAVED",
+      "status": "COMPLETED",
+      "termination": "FINISHED",
+      "steps": 7,
+      "draft_count": 1,
+      "draft_id": "9bf56fa5-5675-4231-b24a-a468833fc79b",
+      "suggested_slot": "2026-11-02T17:00:00+08:00",
+      "model_error": null
+    }
+  ]
+}

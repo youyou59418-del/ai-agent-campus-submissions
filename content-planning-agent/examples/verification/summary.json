@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:16.899194+00:00",
+  "python": "3.13.12",
+  "platform": "Windows",
+  "unit_tests_run": 59,
+  "unit_test_failures": 0,
+  "unit_test_errors": 0,
+  "unit_tests_passed": true,
+  "offline_scenarios_passed": 15,
+  "offline_scenarios_total": 15,
+  "cli_smoke_passed": true,
+  "elapsed_seconds": 4.003,
+  "live_model_evidence": "separate under examples/live*; never inferred from these tests"
+}

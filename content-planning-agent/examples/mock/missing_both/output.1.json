@@ -1,0 +1,25 @@
+{
+  "request_id": "case-missing-both",
+  "status": "NEEDS_INPUT",
+  "termination": "MISSING_INPUT",
+  "missing_fields": [
+    "budget",
+    "deadline"
+  ],
+  "task_plan": [],
+  "step_attempts": [],
+  "actual_total_units": "0.00",
+  "save_status": "NOT_SAVED",
+  "saved_plan": null,
+  "uncompleted_reasons": [
+    "budget",
+    "deadline"
+  ],
+  "published": false,
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "steps": 0,
+  "max_steps": 24,
+  "model_error": null,
+  "elapsed_wall_seconds": 0.0
+}

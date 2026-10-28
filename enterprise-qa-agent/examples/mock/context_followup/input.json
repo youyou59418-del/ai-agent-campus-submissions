@@ -1,0 +1,14 @@
+{
+  "request_id": "case-context",
+  "question": "那需要提前几天？",
+  "history": [
+    {
+      "role": "user",
+      "content": "我准备申请年假。"
+    },
+    {
+      "role": "assistant",
+      "content": "请继续说明你想了解的申请要求。"
+    }
+  ]
+}

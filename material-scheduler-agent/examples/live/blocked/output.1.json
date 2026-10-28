@@ -1,0 +1,34 @@
+{
+  "request_id": "case-blocked",
+  "status": "COMPLETED",
+  "termination": "FINISHED",
+  "items": [
+    {
+      "material_id": "M03",
+      "review_status": "BLOCKED",
+      "risk_reasons": [
+        {
+          "rule_id": "R02",
+          "field": "copyright_confirmed",
+          "severity": "block",
+          "reason": "版权未确认，阻断排期"
+        }
+      ],
+      "requested_slot": "2026-11-02T18:00:00+08:00",
+      "suggested_slot": null,
+      "pending_items": [],
+      "outcome": "BLOCKED",
+      "draft_save_status": "NOT_ATTEMPTED",
+      "draft": null,
+      "error": null,
+      "published": false
+    }
+  ],
+  "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "steps": 3,
+  "max_steps": 24,
+  "model_error": null,
+  "elapsed_seconds": 4.724
+}

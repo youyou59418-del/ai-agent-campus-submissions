@@ -1,0 +1,170 @@
+{
+  "generated_at_utc": "2026-10-28T11:38:16.350987+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mock_boundary": null,
+  "input": {
+    "request_id": "case-conflict",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M01",
+        "include_supplement": false,
+        "reason": "读取素材 M01 元数据以开始审核"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "秋日剪辑教程",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "读取素材 M01 元数据以开始审核",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M01",
+        "reason": "素材已读取，进行规则审核"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "APPROVED",
+        "findings": [],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "素材已读取，进行规则审核",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 3,
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M01",
+        "include_alternatives": false,
+        "reason": "审核通过，检查原定时间 2026-11-02T18:00 是否可用"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "审核通过，检查原定时间 2026-11-02T18:00 是否可用",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 4,
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M01",
+        "include_alternatives": true,
+        "reason": "原定时间冲突，查询替代时段供用户选择"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          },
+          {
+            "slot": "2026-11-02T19:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T20:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T21:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "原定时间冲突，查询替代时段供用户选择",
+      "next_action": "finish"
+    },
+    {
+      "step": 5,
+      "tool": "finish",
+      "arguments": {
+        "reason": "M01 原定时间 2026-11-02T18:00 存在冲突（existing-001），且为硬性要求不可更改。替代时段 19:00/20:00/21:00 可用但需用户确认，当前无 approved_slot，无法保存草稿。请求用户调整要求或批准替代时段。"
+      },
+      "observation": {
+        "ok": true,
+        "code": "FINISHED"
+      },
+      "decision_basis": "M01 原定时间 2026-11-02T18:00 存在冲突（existing-001），且为硬性要求不可更改。替代时段 19:00/20:00/21:00 可用但需用户确认，当前无 approved_slot，无法保存草稿。请求用户调整要求或批准替代时段。",
+      "next_action": "FINISHED"
+    }
+  ],
+  "result": {
+    "request_id": "case-conflict",
+    "status": "INCOMPLETE",
+    "termination": "FINISHED",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "APPROVED",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": null,
+        "pending_items": [],
+        "outcome": "INCOMPLETE",
+        "draft_save_status": "NOT_ATTEMPTED",
+        "draft": null,
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 5,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_seconds": 14.277
+  },
+  "usage": {
+    "prompt_tokens": 6981,
+    "completion_tokens": 352,
+    "api_calls": 5
+  }
+}

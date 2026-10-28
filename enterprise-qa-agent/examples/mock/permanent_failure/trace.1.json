@@ -1,0 +1,157 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:18.161863+00:00",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "provider_base_url": null,
+  "input": {
+    "request_id": "case-permanent",
+    "question": "年假申请需要提前几天？",
+    "history": []
+  },
+  "initial_corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+  "steps": [
+    {
+      "step": 1,
+      "model": "offline-handwritten-policy",
+      "tool": "search_documents",
+      "arguments": {
+        "query": "年假申请需要提前几天？",
+        "strategy": "literal",
+        "reason": "先检索与当前问题相关的文档。"
+      },
+      "observation": {
+        "ok": true,
+        "hits": [
+          {
+            "doc_id": "D03",
+            "version_date": "2026-09-20",
+            "fragment_id": "F1",
+            "title": "年假申请 FAQ",
+            "fact_key": "leave.notice",
+            "scope": "员工年假申请",
+            "priority": null,
+            "kind": "faq",
+            "score": 7.41057,
+            "candidate_only": true
+          }
+        ],
+        "total_matches": 1,
+        "more_available": false,
+        "strategy": "literal",
+        "query": "年假申请需要提前几天？",
+        "expanded_query": "年假申请需要提前几天？",
+        "corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+        "notice": "Search hits are locators, not read evidence. Dates do not imply policy precedence."
+      },
+      "decision_basis": "先检索与当前问题相关的文档。",
+      "next_action": "read_fragment"
+    },
+    {
+      "step": 2,
+      "model": "offline-handwritten-policy",
+      "tool": "read_fragment",
+      "arguments": {
+        "doc_id": "D03",
+        "version_date": "2026-09-20",
+        "fragment_id": "F1",
+        "reason": "读取检索命中的原文与版本，建立可引用证据。"
+      },
+      "observation": {
+        "ok": false,
+        "code": "READ_UNAVAILABLE"
+      },
+      "decision_basis": "读取检索命中的原文与版本，建立可引用证据。",
+      "next_action": "read_fragment"
+    },
+    {
+      "step": 3,
+      "model": "offline-handwritten-policy",
+      "tool": "read_fragment",
+      "arguments": {
+        "doc_id": "D03",
+        "version_date": "2026-09-20",
+        "fragment_id": "F1",
+        "reason": "读取检索命中的原文与版本，建立可引用证据。"
+      },
+      "observation": {
+        "ok": false,
+        "code": "READ_UNAVAILABLE"
+      },
+      "decision_basis": "读取检索命中的原文与版本，建立可引用证据。",
+      "next_action": "submit_answer"
+    },
+    {
+      "step": 4,
+      "model": "offline-handwritten-policy",
+      "tool": "submit_answer",
+      "arguments": {
+        "mode": "tool_failure",
+        "fact_key": "",
+        "citations": [],
+        "reason": "同一文档工具持续失败，停止并明确资料不可用。"
+      },
+      "observation": {
+        "ok": true,
+        "code": "ANSWER_ACCEPTED",
+        "result": {
+          "request_id": "case-permanent",
+          "question": "年假申请需要提前几天？",
+          "run_status": "COMPLETED",
+          "task_status": "TOOL_FAILURE",
+          "answer": "文档工具持续不可用，暂时无法提供有依据的回答。",
+          "citations": [],
+          "gaps": [
+            "可用的文档检索与原文读取结果"
+          ],
+          "follow_up_question": "请稍后重试或提供可核对的制度原文。",
+          "resolved_fact_key": null,
+          "corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+          "answer_boundary": "Extractive facts from complete verified fragments; no general semantic entailment claim."
+        }
+      },
+      "decision_basis": "同一文档工具持续失败，停止并明确资料不可用。",
+      "next_action": "ANSWER_ACCEPTED"
+    }
+  ],
+  "result": {
+    "request_id": "case-permanent",
+    "question": "年假申请需要提前几天？",
+    "run_status": "COMPLETED",
+    "task_status": "TOOL_FAILURE",
+    "answer": "文档工具持续不可用，暂时无法提供有依据的回答。",
+    "citations": [],
+    "gaps": [
+      "可用的文档检索与原文读取结果"
+    ],
+    "follow_up_question": "请稍后重试或提供可核对的制度原文。",
+    "resolved_fact_key": null,
+    "corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+    "answer_boundary": "Extractive facts from complete verified fragments; no general semantic entailment claim.",
+    "mode": "mock",
+    "model": "offline-handwritten-policy",
+    "termination": "ANSWER_ACCEPTED",
+    "model_error": null,
+    "steps": 4,
+    "max_steps": 14,
+    "elapsed_wall_seconds": 0.002
+  },
+  "usage": null,
+  "tool_state": {
+    "successful_searches": 1,
+    "read_locators": [],
+    "tool_failures": [
+      {
+        "tool": "read_fragment",
+        "code": "READ_UNAVAILABLE",
+        "step": 2
+      },
+      {
+        "tool": "read_fragment",
+        "code": "READ_UNAVAILABLE",
+        "step": 3
+      }
+    ],
+    "final_accepted": true
+  },
+  "mock_boundary": "Handwritten controlled-corpus test policy; not model decision evidence."
+}

@@ -1,0 +1,11 @@
+{
+  "notice": "Synthetic licensed placeholders, not real media files or production content.",
+  "primary": [
+    {"id": "A01", "type": "video", "title": "主题开场镜头", "license": "synthetic-cleared"},
+    {"id": "A02", "type": "image", "title": "活动信息卡片", "license": "synthetic-cleared"}
+  ],
+  "backup": [
+    {"id": "B01", "type": "image", "title": "备用主题模板", "license": "synthetic-cleared"},
+    {"id": "B02", "type": "video", "title": "备用演示镜头", "license": "synthetic-cleared"}
+  ]
+}

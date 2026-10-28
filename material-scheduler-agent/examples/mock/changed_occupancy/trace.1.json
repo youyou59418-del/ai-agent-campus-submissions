@@ -1,0 +1,219 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:11.835740+00:00",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "provider_base_url": null,
+  "mock_boundary": "Fixed offline policy; proves workflow only, not model decisions.",
+  "input": {
+    "request_id": "case-changed-occupancy",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "offline-handwritten-policy",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M01",
+        "include_supplement": false,
+        "reason": "先读取素材，避免凭空审核。"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "秋日剪辑教程",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "先读取素材，避免凭空审核。",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "model": "offline-handwritten-policy",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M01",
+        "reason": "依据已读取信息执行规则审核。"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "APPROVED",
+        "findings": [],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "依据已读取信息执行规则审核。",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 3,
+      "model": "offline-handwritten-policy",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M01",
+        "include_alternatives": false,
+        "reason": "审核通过，先检查用户原定时段。"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "审核通过，先检查用户原定时段。",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 4,
+      "model": "offline-handwritten-policy",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M01",
+        "include_alternatives": true,
+        "reason": "原时段冲突，查询替代时段并保留硬性要求。"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          },
+          {
+            "slot": "2026-11-02T19:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T20:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T21:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "原时段冲突，查询替代时段并保留硬性要求。",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "model": "offline-handwritten-policy",
+      "tool": "save_draft",
+      "arguments": {
+        "material_id": "M01",
+        "slot": "2026-11-02T19:00:00+08:00",
+        "reason": "仅保存已查询的可用时段；确认状态由工具根据用户原始输入判定。"
+      },
+      "observation": {
+        "ok": true,
+        "code": "SAVED",
+        "draft": {
+          "draft_id": "4d109aab-0f17-4939-b38c-5d9e5be85273",
+          "request_id": "case-changed-occupancy",
+          "material_id": "M01",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T18:00:00+08:00",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": true,
+          "status": "PENDING_CONFIRMATION",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        }
+      },
+      "decision_basis": "仅保存已查询的可用时段；确认状态由工具根据用户原始输入判定。",
+      "next_action": "finish"
+    },
+    {
+      "step": 6,
+      "model": "offline-handwritten-policy",
+      "tool": "finish",
+      "arguments": {
+        "reason": "各素材已形成草稿或明确列出缺资料、风险、无可用时段或保存失败。"
+      },
+      "observation": {
+        "ok": true,
+        "code": "FINISHED"
+      },
+      "decision_basis": "各素材已形成草稿或明确列出缺资料、风险、无可用时段或保存失败。",
+      "next_action": "FINISHED"
+    }
+  ],
+  "result": {
+    "request_id": "case-changed-occupancy",
+    "status": "COMPLETED",
+    "termination": "FINISHED",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "APPROVED",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": "2026-11-02T19:00:00+08:00",
+        "pending_items": [
+          "confirm_alternative_slot"
+        ],
+        "outcome": "DRAFT_SAVED",
+        "draft_save_status": "SAVED",
+        "draft": {
+          "draft_id": "4d109aab-0f17-4939-b38c-5d9e5be85273",
+          "request_id": "case-changed-occupancy",
+          "material_id": "M01",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T18:00:00+08:00",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": true,
+          "status": "PENDING_CONFIRMATION",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        },
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "mock",
+    "model": "offline-handwritten-policy",
+    "steps": 6,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_seconds": 0.008
+  },
+  "usage": null,
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "offline"
+}

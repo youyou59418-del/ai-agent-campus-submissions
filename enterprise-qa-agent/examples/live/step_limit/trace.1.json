@@ -1,0 +1,84 @@
+{
+  "generated_at_utc": "2026-10-28T13:15:49.262828+00:00",
+  "mode": "live",
+  "model": "qwen3.8-flash",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "input": {
+    "request_id": "case-limit",
+    "question": "年假申请需要提前几天？",
+    "history": []
+  },
+  "initial_corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+  "steps": [
+    {
+      "step": 1,
+      "model": "qwen3.8-flash",
+      "tool": "search_documents",
+      "arguments": {
+        "query": "年假申请 提前几天",
+        "reason": "检索年假申请提前天数相关制度文档",
+        "strategy": "literal"
+      },
+      "observation": {
+        "ok": true,
+        "hits": [
+          {
+            "doc_id": "D03",
+            "version_date": "2026-09-20",
+            "fragment_id": "F1",
+            "title": "年假申请 FAQ",
+            "fact_key": "leave.notice",
+            "scope": "员工年假申请",
+            "priority": null,
+            "kind": "faq",
+            "score": 7.41057,
+            "candidate_only": true
+          }
+        ],
+        "total_matches": 1,
+        "more_available": false,
+        "strategy": "literal",
+        "query": "年假申请 提前几天",
+        "expanded_query": "年假申请 提前几天",
+        "corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+        "notice": "Search hits are locators, not read evidence. Dates do not imply policy precedence."
+      },
+      "decision_basis": "检索年假申请提前天数相关制度文档",
+      "next_action": "STEP_LIMIT"
+    }
+  ],
+  "result": {
+    "request_id": "case-limit",
+    "question": "年假申请需要提前几天？",
+    "run_status": "INCOMPLETE",
+    "task_status": "INCOMPLETE",
+    "answer": "",
+    "citations": [],
+    "gaps": [
+      "STEP_LIMIT"
+    ],
+    "follow_up_question": null,
+    "resolved_fact_key": null,
+    "corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+    "answer_boundary": "No accepted evidence-backed answer; tool/model failure or execution limit.",
+    "mode": "live",
+    "model": "qwen3.8-flash",
+    "termination": "STEP_LIMIT",
+    "model_error": null,
+    "steps": 1,
+    "max_steps": 1,
+    "elapsed_wall_seconds": 1.154
+  },
+  "usage": {
+    "prompt_tokens": 1281,
+    "completion_tokens": 56,
+    "api_calls": 1
+  },
+  "tool_state": {
+    "successful_searches": 1,
+    "read_locators": [],
+    "tool_failures": [],
+    "final_accepted": false
+  },
+  "mock_boundary": null
+}

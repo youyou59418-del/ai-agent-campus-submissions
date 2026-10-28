@@ -1,0 +1,36 @@
+{
+  "request_id": "case-risk-review",
+  "status": "COMPLETED",
+  "termination": "FINISHED",
+  "items": [
+    {
+      "material_id": "M04",
+      "review_status": "NEEDS_REVIEW",
+      "risk_reasons": [
+        {
+          "rule_id": "R03",
+          "field": "consent_confirmed",
+          "severity": "review",
+          "reason": "出镜授权不明确，需要人工审核"
+        }
+      ],
+      "requested_slot": "2026-11-02T18:00:00+08:00",
+      "suggested_slot": null,
+      "pending_items": [
+        "consent_confirmed"
+      ],
+      "outcome": "NEEDS_REVIEW",
+      "draft_save_status": "NOT_ATTEMPTED",
+      "draft": null,
+      "error": null,
+      "published": false
+    }
+  ],
+  "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "steps": 3,
+  "max_steps": 24,
+  "model_error": null,
+  "elapsed_seconds": 0.0
+}

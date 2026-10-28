@@ -1,0 +1,23 @@
+{
+  "run_status": "INCOMPLETE",
+  "task_status": "INCOMPLETE",
+  "script": null,
+  "risks": [],
+  "gaps": [
+    "STEP_LIMIT"
+  ],
+  "follow_up_question": null,
+  "request_id": "case-step-limit",
+  "drafts": [],
+  "duration_checks": [],
+  "rule_checks": [],
+  "minimum_estimated_seconds": 12,
+  "published": false,
+  "mode": "live",
+  "model": "qwen3.8-flash",
+  "steps": 1,
+  "max_steps": 1,
+  "termination": "STEP_LIMIT",
+  "model_error": null,
+  "elapsed_wall_seconds": 1.511
+}

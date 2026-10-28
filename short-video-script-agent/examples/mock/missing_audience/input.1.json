@@ -1,0 +1,8 @@
+{
+  "request_id": "case-missing-audience",
+  "topic": "字幕功能介绍",
+  "audience": null,
+  "platform": "抖音",
+  "target_seconds": 30,
+  "style": "自然"
+}

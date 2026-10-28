@@ -1,0 +1,20 @@
+{
+  "case": "context_missing",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "no_fabricated_citation": true
+      },
+      "task_status": "NEEDS_CLARIFICATION",
+      "steps": 4,
+      "model_error": null,
+      "cited_documents": []
+    }
+  ]
+}

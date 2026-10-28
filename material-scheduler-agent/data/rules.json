@@ -1,0 +1,9 @@
+{
+  "version": "synthetic-v1",
+  "notice": "合成业务规则，仅为工程验证，不代表小影实际审核政策。",
+  "rules": [
+    {"id": "R01", "field": "title", "kind": "required", "severity": "missing", "message": "缺少素材标题"},
+    {"id": "R02", "field": "copyright_confirmed", "kind": "must_be_true", "severity": "block", "message": "版权未确认，阻断排期"},
+    {"id": "R03", "field": "consent_confirmed", "kind": "must_be_true", "severity": "review", "message": "出镜授权不明确，需要人工审核"}
+  ]
+}

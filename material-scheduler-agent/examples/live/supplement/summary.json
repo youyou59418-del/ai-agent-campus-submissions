@@ -1,0 +1,20 @@
+{
+  "case": "supplement",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "expected": "DRAFT_SAVED",
+      "actual": "DRAFT_SAVED",
+      "status": "COMPLETED",
+      "termination": "FINISHED",
+      "steps": 6,
+      "draft_count": 1,
+      "draft_id": "770e4e52-4f52-42ff-83d8-f3fc1771c973",
+      "suggested_slot": "2026-11-02T17:00:00+08:00",
+      "model_error": null
+    }
+  ]
+}

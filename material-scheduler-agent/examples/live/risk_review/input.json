@@ -1,0 +1,11 @@
+{
+  "request_id": "case-risk-review",
+  "items": [
+    {
+      "material_id": "M04",
+      "requested_slot": "2026-11-02T18:00:00+08:00",
+      "hard_requirement": true,
+      "channel": "xiaoying"
+    }
+  ]
+}

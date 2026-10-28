@@ -1,0 +1,435 @@
+{
+  "mode": "mock",
+  "total_cases": 15,
+  "passed": 15,
+  "cases": [
+    {
+      "case": "normal",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "12.00",
+          "steps": 8,
+          "plan_id": "6559e865-b7aa-4637-8a39-65a45b33b390",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "missing_budget",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "no_model_calls": true
+          },
+          "actual": "NEEDS_INPUT",
+          "termination": "MISSING_INPUT",
+          "strategy": null,
+          "spent_units": "0.00",
+          "steps": 0,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "missing_deadline",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "no_model_calls": true
+          },
+          "actual": "NEEDS_INPUT",
+          "termination": "MISSING_INPUT",
+          "strategy": null,
+          "spent_units": "0.00",
+          "steps": 0,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "missing_both",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "no_model_calls": true
+          },
+          "actual": "NEEDS_INPUT",
+          "termination": "MISSING_INPUT",
+          "strategy": null,
+          "spent_units": "0.00",
+          "steps": 0,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "tool_failure",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true,
+            "failed_attempt_retained": true,
+            "successful_search_not_reexecuted": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "13.00",
+          "steps": 10,
+          "plan_id": "78682d58-cc0a-4329-bb4e-e48b43a3ae23",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "budget_replan",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true,
+            "observed_12_then_8": true,
+            "actual_8": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "economy",
+          "spent_units": "8.00",
+          "steps": 10,
+          "plan_id": "177aa1d1-2b43-4c34-98b5-5e8bbebd56ae",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "budget_impossible",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true
+          },
+          "actual": "INCOMPLETE",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "0.00",
+          "steps": 3,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "deadline_replan",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "economy",
+          "spent_units": "8.00",
+          "steps": 10,
+          "plan_id": "446e4dff-f178-4ad1-9190-6d7b12056a99",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "deadline_impossible",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true
+          },
+          "actual": "INCOMPLETE",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "0.00",
+          "steps": 3,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "partial_success",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true,
+            "partial_not_faked": true,
+            "adjusted_strategy": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "economy",
+          "spent_units": "7.00",
+          "steps": 10,
+          "plan_id": "c4cce909-65c5-43a5-b631-9035cb456751",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "permanent_failure",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "failure_not_saved": true
+          },
+          "actual": "INCOMPLETE",
+          "termination": "FINISHED",
+          "strategy": "economy",
+          "spent_units": "6.00",
+          "steps": 15,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "12.00",
+          "steps": 8,
+          "plan_id": "14316e46-559a-4cdb-8e40-abfe4b301151",
+          "model_error": null
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true,
+            "one_same_plan": true,
+            "no_new_charge_or_steps": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "12.00",
+          "steps": 1,
+          "plan_id": "14316e46-559a-4cdb-8e40-abfe4b301151",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "resume",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "failed_attempt_retained": true,
+            "successful_search_not_reexecuted": true
+          },
+          "actual": "INCOMPLETE",
+          "termination": "INTERRUPTED_AFTER_FAILURE",
+          "strategy": "premium",
+          "spent_units": "3.00",
+          "steps": 5,
+          "plan_id": null,
+          "model_error": null
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "deadline_not_exceeded": true,
+            "save_matches_spent": true,
+            "failed_attempt_retained": true,
+            "successful_search_not_reexecuted": true,
+            "kept_first_attempts": true,
+            "replanned_after_failure": true
+          },
+          "actual": "COMPLETED",
+          "termination": "FINISHED",
+          "strategy": "economy",
+          "spent_units": "9.00",
+          "steps": 7,
+          "plan_id": "20bbaef7-9f83-4624-a05f-40d2a4c70e81",
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "save_failure",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "failure_not_saved": true
+          },
+          "actual": "INCOMPLETE",
+          "termination": "FINISHED",
+          "strategy": "premium",
+          "spent_units": "12.00",
+          "steps": 11,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    },
+    {
+      "case": "step_limit",
+      "mode": "mock",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "never_published": true,
+            "ledger_sum": true,
+            "budget_not_exceeded": true,
+            "bounded_unfinished": true
+          },
+          "actual": "INCOMPLETE",
+          "termination": "STEP_LIMIT",
+          "strategy": "premium",
+          "spent_units": "0.00",
+          "steps": 1,
+          "plan_id": null,
+          "model_error": null
+        }
+      ]
+    }
+  ]
+}

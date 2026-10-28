@@ -1,0 +1,28 @@
+{
+  "case": "tool_failure",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "deadline_not_exceeded": true,
+        "save_matches_spent": true,
+        "failed_attempt_retained": true,
+        "successful_search_not_reexecuted": true
+      },
+      "actual": "COMPLETED",
+      "termination": "FINISHED",
+      "strategy": "premium",
+      "spent_units": "13.00",
+      "steps": 10,
+      "plan_id": "78682d58-cc0a-4329-bb4e-e48b43a3ae23",
+      "model_error": null
+    }
+  ]
+}

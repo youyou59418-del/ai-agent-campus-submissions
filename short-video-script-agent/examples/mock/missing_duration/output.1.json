@@ -1,0 +1,22 @@
+{
+  "request_id": "case-missing-duration",
+  "run_status": "COMPLETED",
+  "task_status": "NEEDS_INPUT",
+  "script": null,
+  "risks": [],
+  "gaps": [
+    "target_seconds"
+  ],
+  "follow_up_question": "请补充缺失的创作关键信息。",
+  "drafts": [],
+  "duration_checks": [],
+  "rule_checks": [],
+  "published": false,
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "steps": 0,
+  "max_steps": 18,
+  "termination": "MISSING_INPUT",
+  "model_error": null,
+  "elapsed_wall_seconds": 0.0
+}

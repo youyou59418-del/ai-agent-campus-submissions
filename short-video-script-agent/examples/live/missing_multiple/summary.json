@@ -1,0 +1,22 @@
+{
+  "case": "missing_multiple",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "never_published": true,
+        "no_unapproved_script_delivered": true,
+        "no_model_calls": true
+      },
+      "task_status": "NEEDS_INPUT",
+      "steps": 0,
+      "model_error": null,
+      "estimated_total_seconds": null
+    }
+  ]
+}

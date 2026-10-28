@@ -1,0 +1,398 @@
+{
+  "generated_at_utc": "2026-10-28T11:51:06.078540+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mock_boundary": null,
+  "input": {
+    "request_id": "case-multi",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      },
+      {
+        "material_id": "M05",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M01",
+        "include_supplement": false,
+        "reason": "读取第一项素材元数据以开始审核"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "秋日剪辑教程",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "读取第一项素材元数据以开始审核",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "model": "qwen3.8-27b",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M01",
+        "reason": "读取后按规则审核M01"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "APPROVED",
+        "findings": [],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "读取后按规则审核M01",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 3,
+      "model": "qwen3.8-27b",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M01",
+        "include_alternatives": false,
+        "reason": "审核通过，检查原定时间是否可用"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "审核通过，检查原定时间是否可用",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 4,
+      "model": "qwen3.8-27b",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M01",
+        "include_alternatives": true,
+        "reason": "原定时间冲突，查询替代时段"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          },
+          {
+            "slot": "2026-11-02T19:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T20:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T21:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "原定时间冲突，查询替代时段",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "model": "qwen3.8-27b",
+      "tool": "save_draft",
+      "arguments": {
+        "material_id": "M01",
+        "slot": "2026-11-02T19:00:00+08:00",
+        "reason": "原定时间冲突，选择最近可用替代时段保存待确认草稿"
+      },
+      "observation": {
+        "ok": true,
+        "code": "SAVED",
+        "draft": {
+          "draft_id": "da8c250b-728c-4304-85ba-e3a665f1c508",
+          "request_id": "case-multi",
+          "material_id": "M01",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T18:00:00+08:00",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": true,
+          "status": "PENDING_CONFIRMATION",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        }
+      },
+      "decision_basis": "原定时间冲突，选择最近可用替代时段保存待确认草稿",
+      "next_action": "read_material"
+    },
+    {
+      "step": 6,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M05",
+        "include_supplement": false,
+        "reason": "读取第二项素材元数据以开始审核"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "节日模板",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "读取第二项素材元数据以开始审核",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 7,
+      "model": "qwen3.8-27b",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M05",
+        "reason": "读取后按规则审核M05"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "APPROVED",
+        "findings": [],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "读取后按规则审核M05",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 8,
+      "model": "qwen3.8-27b",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M05",
+        "include_alternatives": false,
+        "reason": "审核通过，检查原定时间是否可用"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "审核通过，检查原定时间是否可用",
+      "next_action": "query_slots"
+    },
+    {
+      "step": 9,
+      "model": "qwen3.8-27b",
+      "tool": "query_slots",
+      "arguments": {
+        "material_id": "M05",
+        "include_alternatives": true,
+        "reason": "原定时间冲突，查询替代时段"
+      },
+      "observation": {
+        "ok": true,
+        "slots": [
+          {
+            "slot": "2026-11-02T18:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "existing-001"
+            ]
+          },
+          {
+            "slot": "2026-11-02T19:00:00+08:00",
+            "available": false,
+            "conflicts": [
+              "draft:da8c250b-728c-4304-85ba-e3a665f1c508"
+            ]
+          },
+          {
+            "slot": "2026-11-02T20:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          },
+          {
+            "slot": "2026-11-02T21:00:00+08:00",
+            "available": true,
+            "conflicts": []
+          }
+        ],
+        "existing_draft": null,
+        "approval_scope": null,
+        "notice": "availability is rechecked on save; alternatives are proposals, not user approvals"
+      },
+      "decision_basis": "原定时间冲突，查询替代时段",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 10,
+      "model": "qwen3.8-27b",
+      "tool": "save_draft",
+      "arguments": {
+        "material_id": "M05",
+        "slot": "2026-11-02T20:00:00+08:00",
+        "reason": "原定时间冲突且19点已被M01草稿占用，选择最近可用替代时段保存待确认草稿"
+      },
+      "observation": {
+        "ok": true,
+        "code": "SAVED",
+        "draft": {
+          "draft_id": "ca9d3130-bbe3-4f95-8a1b-3b1eb88094ed",
+          "request_id": "case-multi",
+          "material_id": "M05",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T18:00:00+08:00",
+          "suggested_slot": "2026-11-02T20:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": true,
+          "status": "PENDING_CONFIRMATION",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        }
+      },
+      "decision_basis": "原定时间冲突且19点已被M01草稿占用，选择最近可用替代时段保存待确认草稿",
+      "next_action": "finish"
+    },
+    {
+      "step": 11,
+      "model": "qwen3.8-27b",
+      "tool": "finish",
+      "arguments": {
+        "reason": "两项素材均已保存待确认草稿，处理完毕"
+      },
+      "observation": {
+        "ok": true,
+        "code": "FINISHED"
+      },
+      "decision_basis": "两项素材均已保存待确认草稿，处理完毕",
+      "next_action": "FINISHED"
+    }
+  ],
+  "result": {
+    "request_id": "case-multi",
+    "status": "COMPLETED",
+    "termination": "FINISHED",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "APPROVED",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": "2026-11-02T19:00:00+08:00",
+        "pending_items": [
+          "confirm_alternative_slot"
+        ],
+        "outcome": "DRAFT_SAVED",
+        "draft_save_status": "SAVED",
+        "draft": {
+          "draft_id": "da8c250b-728c-4304-85ba-e3a665f1c508",
+          "request_id": "case-multi",
+          "material_id": "M01",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T18:00:00+08:00",
+          "suggested_slot": "2026-11-02T19:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": true,
+          "status": "PENDING_CONFIRMATION",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        },
+        "error": null,
+        "published": false
+      },
+      {
+        "material_id": "M05",
+        "review_status": "APPROVED",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": "2026-11-02T20:00:00+08:00",
+        "pending_items": [
+          "confirm_alternative_slot"
+        ],
+        "outcome": "DRAFT_SAVED",
+        "draft_save_status": "SAVED",
+        "draft": {
+          "draft_id": "ca9d3130-bbe3-4f95-8a1b-3b1eb88094ed",
+          "request_id": "case-multi",
+          "material_id": "M05",
+          "channel": "xiaoying",
+          "requested_slot": "2026-11-02T18:00:00+08:00",
+          "suggested_slot": "2026-11-02T20:00:00+08:00",
+          "hard_requirement": true,
+          "requires_confirmation": true,
+          "status": "PENDING_CONFIRMATION",
+          "approval_source": null,
+          "published": false,
+          "revision": 1
+        },
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 11,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_seconds": 20.155
+  },
+  "usage": {
+    "prompt_tokens": 23097,
+    "completion_tokens": 661,
+    "api_calls": 11
+  },
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "user-selected model; stop on quota error; console free-only state unverified"
+}

@@ -1,0 +1,11 @@
+{
+  "notice": "Synthetic product facts. No performance data or real media files.",
+  "topics": {
+    "subtitle": {"aliases": ["字幕", "给画面加字", "给视频配字", "视频加字", "屏幕文字"], "canonical": "字幕"},
+    "cover": {"aliases": ["封面", "视频头图"], "canonical": "封面"}
+  },
+  "materials": [
+    {"source_id": "P01", "version_date": "2026-10-20", "topic_key": "subtitle", "title": "字幕功能素材", "facts": [{"fact_id": "F1", "text": "支持字幕。", "approved": true}]},
+    {"source_id": "P02", "version_date": "2026-10-18", "topic_key": "cover", "title": "封面功能素材", "facts": [{"fact_id": "F1", "text": "支持自定义封面。", "approved": true}]}
+  ]
+}

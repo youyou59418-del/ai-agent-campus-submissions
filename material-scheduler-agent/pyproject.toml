@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "material-scheduler-agent"
+version = "0.1.0"
+description = "Model-driven material review and draft scheduling, with enforced confirmation boundaries"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+material-scheduler = "material_scheduler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

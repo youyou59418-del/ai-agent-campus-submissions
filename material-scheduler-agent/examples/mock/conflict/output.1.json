@@ -1,0 +1,42 @@
+{
+  "request_id": "case-conflict",
+  "status": "COMPLETED",
+  "termination": "FINISHED",
+  "items": [
+    {
+      "material_id": "M01",
+      "review_status": "APPROVED",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-02T18:00:00+08:00",
+      "suggested_slot": "2026-11-02T19:00:00+08:00",
+      "pending_items": [
+        "confirm_alternative_slot"
+      ],
+      "outcome": "DRAFT_SAVED",
+      "draft_save_status": "SAVED",
+      "draft": {
+        "draft_id": "6ce345ec-d5da-4b47-8a91-b559de2bec53",
+        "request_id": "case-conflict",
+        "material_id": "M01",
+        "channel": "xiaoying",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": "2026-11-02T19:00:00+08:00",
+        "hard_requirement": true,
+        "requires_confirmation": true,
+        "status": "PENDING_CONFIRMATION",
+        "approval_source": null,
+        "published": false,
+        "revision": 1
+      },
+      "error": null,
+      "published": false
+    }
+  ],
+  "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "steps": 6,
+  "max_steps": 24,
+  "model_error": null,
+  "elapsed_seconds": 0.009
+}

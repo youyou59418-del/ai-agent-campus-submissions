@@ -1,0 +1,25 @@
+{
+  "case": "step_limit",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "bounded_unfinished": true
+      },
+      "actual": "INCOMPLETE",
+      "termination": "STEP_LIMIT",
+      "strategy": "premium",
+      "spent_units": "0.00",
+      "steps": 1,
+      "plan_id": null,
+      "model_error": null
+    }
+  ]
+}

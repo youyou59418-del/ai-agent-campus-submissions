@@ -1,0 +1,181 @@
+{
+  "generated_at_utc": "2026-10-28T12:24:24.845168+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "input": {
+    "request_id": "case-step-limit",
+    "topic": "秋日创作挑战活动",
+    "deadline": "2026-11-03T09:30:00+08:00",
+    "start_time": "2026-11-03T09:00:00+08:00",
+    "initial_strategy": "premium",
+    "budget": "20.00"
+  },
+  "initial_checkpoint": {
+    "request_id": "case-step-limit",
+    "started_at": "2026-11-03T09:00:00+08:00",
+    "strategy": null,
+    "version": 0,
+    "task_plan": [],
+    "spent_units": "0.00",
+    "remaining_budget_units": "20.00",
+    "elapsed_minutes": 0,
+    "materials": [],
+    "step_attempts": [],
+    "latest_estimate": null,
+    "estimate_is_current": false,
+    "quotes": [
+      {
+        "strategy": "premium",
+        "spent_units": "0.00",
+        "remaining_units": "12.00",
+        "estimated_total_units": "12.00",
+        "remaining_minutes": 9,
+        "estimated_finish": "2026-11-03T09:09:00+08:00",
+        "budget_gap_units": "0.00",
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "min_materials": 2,
+        "needs_more_materials": true
+      },
+      {
+        "strategy": "economy",
+        "spent_units": "0.00",
+        "remaining_units": "8.00",
+        "estimated_total_units": "8.00",
+        "remaining_minutes": 7,
+        "estimated_finish": "2026-11-03T09:07:00+08:00",
+        "budget_gap_units": "0.00",
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "min_materials": 1,
+        "needs_more_materials": true
+      }
+    ],
+    "saved_plan": null
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "qwen3.8-27b",
+      "tool": "select_plan",
+      "arguments": {
+        "strategy": "premium",
+        "reason": "按规则先评估给定的 premium 初始草案"
+      },
+      "observation": {
+        "ok": true,
+        "strategy": "premium",
+        "dependencies": [
+          "materials -> script:premium",
+          "script -> fresh_estimate -> save"
+        ],
+        "retained_attempts": 0,
+        "script_fee": {
+          "cost": "10.00",
+          "minutes": 6,
+          "min_materials": 2
+        },
+        "state_after": {
+          "strategy": "premium",
+          "version": 1,
+          "spent_units": "0.00",
+          "elapsed_minutes": 0,
+          "material_count": 0
+        }
+      },
+      "decision_basis": "按规则先评估给定的 premium 初始草案",
+      "next_action": "STEP_LIMIT"
+    }
+  ],
+  "result": {
+    "request_id": "case-step-limit",
+    "status": "INCOMPLETE",
+    "termination": "STEP_LIMIT",
+    "save_status": "NOT_SAVED",
+    "task_plan": [
+      {
+        "step": "materials",
+        "depends_on": [],
+        "status": "PLANNED",
+        "dependency_satisfied": false
+      },
+      {
+        "step": "script:premium",
+        "depends_on": [
+          "materials"
+        ],
+        "status": "PLANNED"
+      },
+      {
+        "step": "estimate_current",
+        "depends_on": [
+          "script:premium"
+        ],
+        "status": "PLANNED"
+      },
+      {
+        "step": "save",
+        "depends_on": [
+          "script:premium",
+          "estimate_current"
+        ],
+        "status": "PLANNED"
+      }
+    ],
+    "strategy": "premium",
+    "budget_units": "20.00",
+    "deadline": "2026-11-03T09:30:00+08:00",
+    "actual_total_units": "0.00",
+    "elapsed_minutes": 0,
+    "step_attempts": [],
+    "retained_materials": [],
+    "saved_plan": null,
+    "uncompleted_reasons": [
+      "STEP_LIMIT"
+    ],
+    "feasibility": [
+      {
+        "strategy": "premium",
+        "spent_units": "0.00",
+        "remaining_units": "12.00",
+        "estimated_total_units": "12.00",
+        "remaining_minutes": 9,
+        "estimated_finish": "2026-11-03T09:09:00+08:00",
+        "budget_gap_units": "0.00",
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "min_materials": 2,
+        "needs_more_materials": true
+      },
+      {
+        "strategy": "economy",
+        "spent_units": "0.00",
+        "remaining_units": "8.00",
+        "estimated_total_units": "8.00",
+        "remaining_minutes": 7,
+        "estimated_finish": "2026-11-03T09:07:00+08:00",
+        "budget_gap_units": "0.00",
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "min_materials": 1,
+        "needs_more_materials": true
+      }
+    ],
+    "published": false,
+    "fee_boundary": "Synthetic business fees and virtual minutes, not actual API billing or wall-clock execution time.",
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 1,
+    "max_steps": 1,
+    "model_error": null,
+    "elapsed_wall_seconds": 1.641
+  },
+  "usage": {
+    "prompt_tokens": 1885,
+    "completion_tokens": 45,
+    "api_calls": 1
+  },
+  "mock_boundary": null,
+  "quota_policy": "User selects model; quota error stops calls; usage does not establish free/billed status."
+}

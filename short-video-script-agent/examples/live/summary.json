@@ -1,0 +1,420 @@
+{
+  "mode": "live",
+  "total_cases": 16,
+  "passed": 16,
+  "cases": [
+    {
+      "case": "normal",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 6,
+          "model_error": null,
+          "estimated_total_seconds": 17
+        }
+      ]
+    },
+    {
+      "case": "missing_audience",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "no_model_calls": true
+          },
+          "task_status": "NEEDS_INPUT",
+          "steps": 0,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "missing_duration",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "no_model_calls": true
+          },
+          "task_status": "NEEDS_INPUT",
+          "steps": 0,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "missing_multiple",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "no_model_calls": true
+          },
+          "task_status": "NEEDS_INPUT",
+          "steps": 0,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "no_materials",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true
+          },
+          "task_status": "NEEDS_MATERIALS",
+          "steps": 4,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "query_rewrite",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 6,
+          "model_error": null,
+          "estimated_total_seconds": 17
+        }
+      ]
+    },
+    {
+      "case": "search_failure_once",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true,
+            "observed_tool_error": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": 16
+        }
+      ]
+    },
+    {
+      "case": "estimate_failure_once",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true,
+            "observed_tool_error": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": 17
+        }
+      ]
+    },
+    {
+      "case": "rules_permanent_failure",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "observed_tool_error": true
+          },
+          "task_status": "TOOL_FAILURE",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "overlong_repair",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true,
+            "observed_initial_38": true,
+            "actually_revised": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": 19
+        }
+      ]
+    },
+    {
+      "case": "impossible_duration",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true
+          },
+          "task_status": "UNFULFILLED",
+          "steps": 13,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "brand_repair",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true,
+            "brand_fail_then_pass": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": 21
+        }
+      ]
+    },
+    {
+      "case": "unsupported_claim",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "unsupported_requirement_reported": true
+          },
+          "task_status": "UNFULFILLED",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "target_changed",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true,
+            "observed_initial_38": true,
+            "actually_revised": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": 20
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true,
+            "observed_initial_38": true,
+            "actually_revised": true,
+            "new_target_is_binding": true,
+            "response_to_changed_target": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 7,
+          "model_error": null,
+          "estimated_total_seconds": 12
+        }
+      ]
+    },
+    {
+      "case": "retrieval_changed",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "duration_within_target": true,
+            "scene_time_sum": true,
+            "has_source_citation": true,
+            "no_invented_performance_fact": true
+          },
+          "task_status": "SCRIPT_READY",
+          "steps": 6,
+          "model_error": null,
+          "estimated_total_seconds": 16
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "response_to_missing_source": true
+          },
+          "task_status": "NEEDS_MATERIALS",
+          "steps": 5,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    },
+    {
+      "case": "step_limit",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "never_published": true,
+            "no_unapproved_script_delivered": true,
+            "explicit_limit": true
+          },
+          "task_status": "INCOMPLETE",
+          "steps": 1,
+          "model_error": null,
+          "estimated_total_seconds": null
+        }
+      ]
+    }
+  ],
+  "collection_note": "Full suite plus named targeted regressions; individual traces carry their actual timestamps.",
+  "last_refreshed_cases": [
+    "retrieval_changed"
+  ]
+}

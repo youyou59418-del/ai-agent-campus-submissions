@@ -1,0 +1,23 @@
+{
+  "case": "search_failure_once",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "expected_original_fact": true,
+        "observed_tool_error": true
+      },
+      "task_status": "ANSWERED",
+      "steps": 6,
+      "model_error": null,
+      "cited_documents": [
+        "D03"
+      ]
+    }
+  ]
+}

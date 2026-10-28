@@ -1,0 +1,21 @@
+{
+  "case": "step_limit",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "no_fabricated_citation": true,
+        "explicit_limit": true
+      },
+      "task_status": "INCOMPLETE",
+      "steps": 1,
+      "model_error": null,
+      "cited_documents": []
+    }
+  ]
+}

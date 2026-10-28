@@ -1,0 +1,74 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:11.863388+00:00",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "provider_base_url": null,
+  "mock_boundary": "Fixed offline policy; proves workflow only, not model decisions.",
+  "input": {
+    "request_id": "case-step-limit",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "offline-handwritten-policy",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M01",
+        "include_supplement": false,
+        "reason": "先读取素材，避免凭空审核。"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "秋日剪辑教程",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "先读取素材，避免凭空审核。",
+      "next_action": "STEP_LIMIT"
+    }
+  ],
+  "result": {
+    "request_id": "case-step-limit",
+    "status": "INCOMPLETE",
+    "termination": "STEP_LIMIT",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "UNKNOWN",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": null,
+        "pending_items": [],
+        "outcome": "INCOMPLETE",
+        "draft_save_status": "NOT_ATTEMPTED",
+        "draft": null,
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "mock",
+    "model": "offline-handwritten-policy",
+    "steps": 1,
+    "max_steps": 1,
+    "model_error": null,
+    "elapsed_seconds": 0.0
+  },
+  "usage": null,
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "offline"
+}

@@ -1,0 +1,31 @@
+{
+  "request_id": "case-stale",
+  "question": "年假申请需要提前几天？",
+  "run_status": "COMPLETED",
+  "task_status": "ANSWERED",
+  "answer": "依据已核对原文：\n[D03 / 2026-09-20 / F1] 年假申请应至少提前5个工作日提交。",
+  "citations": [
+    {
+      "doc_id": "D03",
+      "version_date": "2026-09-20",
+      "fragment_id": "F1",
+      "quote": "年假申请应至少提前5个工作日提交。",
+      "title": "年假申请 FAQ",
+      "scope": "员工年假申请",
+      "priority": null,
+      "source_hash": "22003e370f3fdfde43bddd7f123899b7948078635f8fdb23711396ac3ec5adbb"
+    }
+  ],
+  "gaps": [],
+  "follow_up_question": null,
+  "resolved_fact_key": "leave.notice",
+  "corpus_hash": "e3a84b5e4639e20cc99f97a03d8ebee8267523dac6b52f69f8c5495f34caa900",
+  "answer_boundary": "Extractive facts from complete verified fragments; no general semantic entailment claim.",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "termination": "ANSWER_ACCEPTED",
+  "model_error": null,
+  "steps": 5,
+  "max_steps": 14,
+  "elapsed_wall_seconds": 0.005
+}

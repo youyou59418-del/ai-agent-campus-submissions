@@ -1,0 +1,33 @@
+{
+  "case": "changed_occupancy",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "expected": "DRAFT_SAVED",
+      "actual": "DRAFT_SAVED",
+      "status": "COMPLETED",
+      "termination": "FINISHED",
+      "steps": 6,
+      "draft_count": 1,
+      "draft_id": "4cf663a3-0715-43d0-b69f-ea461266b752",
+      "suggested_slot": "2026-11-02T19:00:00+08:00",
+      "model_error": null
+    },
+    {
+      "round": 2,
+      "passed": true,
+      "expected": "DRAFT_SAVED",
+      "actual": "DRAFT_SAVED",
+      "status": "COMPLETED",
+      "termination": "FINISHED",
+      "steps": 6,
+      "draft_count": 1,
+      "draft_id": "4cf663a3-0715-43d0-b69f-ea461266b752",
+      "suggested_slot": "2026-11-02T20:00:00+08:00",
+      "model_error": null
+    }
+  ]
+}

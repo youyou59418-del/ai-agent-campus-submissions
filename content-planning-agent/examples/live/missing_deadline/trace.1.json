@@ -1,0 +1,46 @@
+{
+  "generated_at_utc": "2026-10-28T12:23:04.594217+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "input": {
+    "request_id": "case-missing-deadline",
+    "topic": "秋日创作挑战活动",
+    "deadline": null,
+    "start_time": "2026-11-03T09:00:00+08:00",
+    "initial_strategy": "premium",
+    "budget": "20.00"
+  },
+  "initial_checkpoint": null,
+  "steps": [],
+  "result": {
+    "request_id": "case-missing-deadline",
+    "status": "NEEDS_INPUT",
+    "termination": "MISSING_INPUT",
+    "missing_fields": [
+      "deadline"
+    ],
+    "task_plan": [],
+    "step_attempts": [],
+    "actual_total_units": "0.00",
+    "save_status": "NOT_SAVED",
+    "saved_plan": null,
+    "uncompleted_reasons": [
+      "deadline"
+    ],
+    "published": false,
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 0,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_wall_seconds": 0.0
+  },
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "api_calls": 0
+  },
+  "mock_boundary": null,
+  "quota_policy": "User selects model; quota error stops calls; usage does not establish free/billed status."
+}

@@ -1,0 +1,12 @@
+{
+  "version": "synthetic-fees-v1",
+  "currency": "simulated_units",
+  "notice": "Synthetic business fees and virtual minutes. Separate from actual model API billing.",
+  "search": {"primary": {"cost": "2.00", "minutes": 2}, "backup": {"cost": "2.00", "minutes": 3}},
+  "search_partial": {"cost": "1.00", "minutes": 1},
+  "script": {"premium": {"cost": "10.00", "minutes": 6, "min_materials": 2}, "economy": {"cost": "6.00", "minutes": 4, "min_materials": 1}},
+  "script_failure": {"cost": "1.00", "minutes": 1},
+  "save": {"cost": "0.00", "minutes": 1},
+  "save_failure": {"cost": "0.00", "minutes": 1},
+  "controls": {"cost": "0.00", "minutes": 0}
+}

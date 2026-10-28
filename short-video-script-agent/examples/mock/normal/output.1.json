@@ -1,0 +1,251 @@
+{
+  "run_status": "COMPLETED",
+  "task_status": "SCRIPT_READY",
+  "script": {
+    "title": "先看事实，再聊用法",
+    "title_id": "T_NAT",
+    "scenes": [
+      {
+        "scene_id": 1,
+        "visual_id": "V_HOOK",
+        "speech_id": "H_NAT",
+        "source_id": "",
+        "fact_id": "",
+        "source_quote": "",
+        "hold_seconds": 9,
+        "visual": "创作者口播引入，不展示未提供的产品界面",
+        "narration": "先说一个小需求，看看素材里明确写了什么。",
+        "subtitle": "先说一个小需求，看看素材里明确写了什么。",
+        "part": "hook"
+      },
+      {
+        "scene_id": 2,
+        "visual_id": "V_FACT",
+        "speech_id": "FACT",
+        "source_id": "P01",
+        "fact_id": "F1",
+        "source_quote": "支持字幕。",
+        "hold_seconds": 9,
+        "visual": "展示原始素材事实卡片与来源 ID",
+        "narration": "支持字幕。",
+        "subtitle": "支持字幕。",
+        "part": "fact"
+      },
+      {
+        "scene_id": 3,
+        "visual_id": "V_CTA",
+        "speech_id": "C_NAT",
+        "source_id": "",
+        "fact_id": "",
+        "source_quote": "",
+        "hold_seconds": 10,
+        "visual": "结尾提问卡片",
+        "narration": "你会怎样安排这段表达？欢迎说说你的想法。",
+        "subtitle": "你会怎样安排这段表达？欢迎说说你的想法。",
+        "part": "cta"
+      }
+    ],
+    "verification": "APPROVED",
+    "draft_id": "D1",
+    "brief": {
+      "topic": "字幕功能介绍",
+      "audience": "新手创作者",
+      "platform": "抖音",
+      "target_seconds": 30,
+      "style": "自然"
+    },
+    "estimated_total_seconds": 28,
+    "scene_durations": [
+      {
+        "scene_id": 1,
+        "speech_units": 18,
+        "speech_seconds": 5,
+        "hold_seconds": 9,
+        "estimated_seconds": 9
+      },
+      {
+        "scene_id": 2,
+        "speech_units": 4,
+        "speech_seconds": 1,
+        "hold_seconds": 9,
+        "estimated_seconds": 9
+      },
+      {
+        "scene_id": 3,
+        "speech_units": 18,
+        "speech_seconds": 5,
+        "hold_seconds": 10,
+        "estimated_seconds": 10
+      }
+    ],
+    "citations": [
+      {
+        "scene_id": 2,
+        "source_id": "P01",
+        "fact_id": "F1",
+        "version_date": "2026-10-20",
+        "quote": "支持字幕。",
+        "source_hash": "3a5e7615e669b2e45e9aaee698a2b1624596ef56ff8790f559023fc0f4a46cae"
+      }
+    ],
+    "data_hash": "2490b36a9e7caac610fbe7e41a44f5da08df941d906e79cac1ccc413531abb4e",
+    "draft_hash": "75f718ab8fd78ad8ff7700a8f7164c18fc305d7710d5bcd3a66de3a05e96e08a"
+  },
+  "risks": [],
+  "gaps": [],
+  "follow_up_question": null,
+  "request_id": "case-normal",
+  "drafts": [
+    {
+      "draft_id": "D1",
+      "spec": {
+        "title_id": "T_NAT",
+        "scenes": [
+          {
+            "scene_id": 1,
+            "visual_id": "V_HOOK",
+            "speech_id": "H_NAT",
+            "source_id": "",
+            "fact_id": "",
+            "source_quote": "",
+            "hold_seconds": 9
+          },
+          {
+            "scene_id": 2,
+            "visual_id": "V_FACT",
+            "speech_id": "FACT",
+            "source_id": "P01",
+            "fact_id": "F1",
+            "source_quote": "支持字幕。",
+            "hold_seconds": 9
+          },
+          {
+            "scene_id": 3,
+            "visual_id": "V_CTA",
+            "speech_id": "C_NAT",
+            "source_id": "",
+            "fact_id": "",
+            "source_quote": "",
+            "hold_seconds": 10
+          }
+        ]
+      },
+      "rendered": {
+        "title": "先看事实，再聊用法",
+        "title_id": "T_NAT",
+        "scenes": [
+          {
+            "scene_id": 1,
+            "visual_id": "V_HOOK",
+            "speech_id": "H_NAT",
+            "source_id": "",
+            "fact_id": "",
+            "source_quote": "",
+            "hold_seconds": 9,
+            "visual": "创作者口播引入，不展示未提供的产品界面",
+            "narration": "先说一个小需求，看看素材里明确写了什么。",
+            "subtitle": "先说一个小需求，看看素材里明确写了什么。",
+            "part": "hook"
+          },
+          {
+            "scene_id": 2,
+            "visual_id": "V_FACT",
+            "speech_id": "FACT",
+            "source_id": "P01",
+            "fact_id": "F1",
+            "source_quote": "支持字幕。",
+            "hold_seconds": 9,
+            "visual": "展示原始素材事实卡片与来源 ID",
+            "narration": "支持字幕。",
+            "subtitle": "支持字幕。",
+            "part": "fact"
+          },
+          {
+            "scene_id": 3,
+            "visual_id": "V_CTA",
+            "speech_id": "C_NAT",
+            "source_id": "",
+            "fact_id": "",
+            "source_quote": "",
+            "hold_seconds": 10,
+            "visual": "结尾提问卡片",
+            "narration": "你会怎样安排这段表达？欢迎说说你的想法。",
+            "subtitle": "你会怎样安排这段表达？欢迎说说你的想法。",
+            "part": "cta"
+          }
+        ],
+        "verification": "UNVERIFIED_DRAFT"
+      },
+      "draft_hash": "75f718ab8fd78ad8ff7700a8f7164c18fc305d7710d5bcd3a66de3a05e96e08a"
+    }
+  ],
+  "duration_checks": [
+    {
+      "draft_id": "D1",
+      "draft_hash": "75f718ab8fd78ad8ff7700a8f7164c18fc305d7710d5bcd3a66de3a05e96e08a",
+      "data_hash": "2490b36a9e7caac610fbe7e41a44f5da08df941d906e79cac1ccc413531abb4e",
+      "per_scene": [
+        {
+          "scene_id": 1,
+          "speech_units": 18,
+          "speech_seconds": 5,
+          "hold_seconds": 9,
+          "estimated_seconds": 9
+        },
+        {
+          "scene_id": 2,
+          "speech_units": 4,
+          "speech_seconds": 1,
+          "hold_seconds": 9,
+          "estimated_seconds": 9
+        },
+        {
+          "scene_id": 3,
+          "speech_units": 18,
+          "speech_seconds": 5,
+          "hold_seconds": 10,
+          "estimated_seconds": 10
+        }
+      ],
+      "total_seconds": 28,
+      "target_seconds": 30,
+      "passed": true,
+      "excess_seconds": 0,
+      "method": {
+        "speech_units_per_second": 4,
+        "minimum_scene_seconds": 2,
+        "formula": "sum(max(ceil(speech_units/rate), hold_seconds, minimum_scene_seconds))",
+        "boundary": "Deterministic estimate, not measured TTS or video duration."
+      }
+    }
+  ],
+  "rule_checks": [
+    {
+      "draft_id": "D1",
+      "draft_hash": "75f718ab8fd78ad8ff7700a8f7164c18fc305d7710d5bcd3a66de3a05e96e08a",
+      "data_hash": "2490b36a9e7caac610fbe7e41a44f5da08df941d906e79cac1ccc413531abb4e",
+      "rules_version": "synthetic-brand-v1",
+      "passed": true,
+      "risks": [],
+      "citations": [
+        {
+          "scene_id": 2,
+          "source_id": "P01",
+          "fact_id": "F1",
+          "version_date": "2026-10-20",
+          "quote": "支持字幕。",
+          "source_hash": "3a5e7615e669b2e45e9aaee698a2b1624596ef56ff8790f559023fc0f4a46cae"
+        }
+      ]
+    }
+  ],
+  "minimum_estimated_seconds": 12,
+  "published": false,
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "steps": 5,
+  "max_steps": 18,
+  "termination": "SCRIPT_ACCEPTED",
+  "model_error": null,
+  "elapsed_wall_seconds": 0.007
+}

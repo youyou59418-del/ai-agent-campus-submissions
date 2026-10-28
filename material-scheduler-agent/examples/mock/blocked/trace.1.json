@@ -1,0 +1,119 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:11.692953+00:00",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "provider_base_url": null,
+  "mock_boundary": "Fixed offline policy; proves workflow only, not model decisions.",
+  "input": {
+    "request_id": "case-blocked",
+    "items": [
+      {
+        "material_id": "M03",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "offline-handwritten-policy",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M03",
+        "include_supplement": false,
+        "reason": "先读取素材，避免凭空审核。"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "未授权音乐演示",
+          "copyright_confirmed": false,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "先读取素材，避免凭空审核。",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "model": "offline-handwritten-policy",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M03",
+        "reason": "依据已读取信息执行规则审核。"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "BLOCKED",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "field": "copyright_confirmed",
+            "severity": "block",
+            "reason": "版权未确认，阻断排期"
+          }
+        ],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "依据已读取信息执行规则审核。",
+      "next_action": "finish"
+    },
+    {
+      "step": 3,
+      "model": "offline-handwritten-policy",
+      "tool": "finish",
+      "arguments": {
+        "reason": "各素材已形成草稿或明确列出缺资料、风险、无可用时段或保存失败。"
+      },
+      "observation": {
+        "ok": true,
+        "code": "FINISHED"
+      },
+      "decision_basis": "各素材已形成草稿或明确列出缺资料、风险、无可用时段或保存失败。",
+      "next_action": "FINISHED"
+    }
+  ],
+  "result": {
+    "request_id": "case-blocked",
+    "status": "COMPLETED",
+    "termination": "FINISHED",
+    "items": [
+      {
+        "material_id": "M03",
+        "review_status": "BLOCKED",
+        "risk_reasons": [
+          {
+            "rule_id": "R02",
+            "field": "copyright_confirmed",
+            "severity": "block",
+            "reason": "版权未确认，阻断排期"
+          }
+        ],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": null,
+        "pending_items": [],
+        "outcome": "BLOCKED",
+        "draft_save_status": "NOT_ATTEMPTED",
+        "draft": null,
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "mock",
+    "model": "offline-handwritten-policy",
+    "steps": 3,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_seconds": 0.0
+  },
+  "usage": null,
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "offline"
+}

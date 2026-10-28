@@ -1,0 +1,26 @@
+{
+  "case": "normal",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "deadline_not_exceeded": true,
+        "save_matches_spent": true
+      },
+      "actual": "COMPLETED",
+      "termination": "FINISHED",
+      "strategy": "premium",
+      "spent_units": "12.00",
+      "steps": 7,
+      "plan_id": "471aa104-ecfc-45a1-bc43-30cd3c29cb61",
+      "model_error": null
+    }
+  ]
+}

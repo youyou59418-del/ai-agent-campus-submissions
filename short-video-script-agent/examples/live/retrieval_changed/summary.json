@@ -1,0 +1,39 @@
+{
+  "case": "retrieval_changed",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "never_published": true,
+        "duration_within_target": true,
+        "scene_time_sum": true,
+        "has_source_citation": true,
+        "no_invented_performance_fact": true
+      },
+      "task_status": "SCRIPT_READY",
+      "steps": 6,
+      "model_error": null,
+      "estimated_total_seconds": 16
+    },
+    {
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "never_published": true,
+        "no_unapproved_script_delivered": true,
+        "response_to_missing_source": true
+      },
+      "task_status": "NEEDS_MATERIALS",
+      "steps": 5,
+      "model_error": null,
+      "estimated_total_seconds": null
+    }
+  ]
+}

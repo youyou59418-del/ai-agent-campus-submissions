@@ -1,0 +1,44 @@
+{
+  "request_id": "case-conflict",
+  "question": "报销期限多久？",
+  "run_status": "COMPLETED",
+  "task_status": "CONFLICT",
+  "answer": "资料存在冲突，目前不能确定唯一适用规则：\n[D01 / 2026-10-01 / F1] 费用应在发生后30天内完成报销。\n[D02 / 2026-10-15 / F1] 费用应在发生后15天内完成报销。\n请确认适用哪份制度，或补充适用范围和权威优先级说明。",
+  "citations": [
+    {
+      "doc_id": "D01",
+      "version_date": "2026-10-01",
+      "fragment_id": "F1",
+      "quote": "费用应在发生后30天内完成报销。",
+      "title": "费用报销制度甲",
+      "scope": null,
+      "priority": null,
+      "source_hash": "86409b29aeac8b7d5e758b70886c6724b18bc21c6464824c254ef09ee990feba"
+    },
+    {
+      "doc_id": "D02",
+      "version_date": "2026-10-15",
+      "fragment_id": "F1",
+      "quote": "费用应在发生后15天内完成报销。",
+      "title": "费用报销制度乙",
+      "scope": null,
+      "priority": null,
+      "source_hash": "06552b8019bdc97fcb8148ec276258e21db96940223ab0ca160f71375e5faf82"
+    }
+  ],
+  "gaps": [
+    "适用制度或适用范围",
+    "可确认的权威优先级"
+  ],
+  "follow_up_question": "请确认适用哪份制度，或补充适用范围和权威优先级说明。",
+  "resolved_fact_key": "expense.deadline",
+  "corpus_hash": "ba6d696c82bcc7cef512addda5d3f1e2147e31ca26a4d8dbb503c26228ac9237",
+  "answer_boundary": "Extractive facts from complete verified fragments; no general semantic entailment claim.",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "termination": "ANSWER_ACCEPTED",
+  "model_error": null,
+  "steps": 5,
+  "max_steps": 14,
+  "elapsed_wall_seconds": 0.004
+}

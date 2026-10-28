@@ -1,0 +1,27 @@
+{
+  "request_id": "case-step-limit",
+  "status": "INCOMPLETE",
+  "termination": "STEP_LIMIT",
+  "items": [
+    {
+      "material_id": "M01",
+      "review_status": "UNKNOWN",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-02T18:00:00+08:00",
+      "suggested_slot": null,
+      "pending_items": [],
+      "outcome": "INCOMPLETE",
+      "draft_save_status": "NOT_ATTEMPTED",
+      "draft": null,
+      "error": null,
+      "published": false
+    }
+  ],
+  "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+  "mode": "mock",
+  "model": "offline-handwritten-policy",
+  "steps": 1,
+  "max_steps": 1,
+  "model_error": null,
+  "elapsed_seconds": 0.0
+}

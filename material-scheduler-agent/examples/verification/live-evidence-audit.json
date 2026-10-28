@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:12.706846+00:00",
+  "mode": "live",
+  "trace_runs_checked": 15,
+  "errors": [],
+  "passed": true,
+  "usage_for_this_suite": {
+    "api_calls": 80,
+    "prompt_tokens": 127369,
+    "completion_tokens": 4805
+  },
+  "usage_boundary": "API-reported usage for saved traces of this suite only; not free/billed classification or full account usage."
+}

@@ -1,0 +1,23 @@
+{
+  "run_status": "COMPLETED",
+  "task_status": "NEEDS_MATERIALS",
+  "script": null,
+  "risks": [],
+  "gaps": [
+    "与主题直接相关的已批准产品事实"
+  ],
+  "follow_up_question": "请提供该主题的产品事实素材或更明确的检索信息。",
+  "request_id": "case-no-materials",
+  "drafts": [],
+  "duration_checks": [],
+  "rule_checks": [],
+  "minimum_estimated_seconds": null,
+  "published": false,
+  "mode": "live",
+  "model": "qwen3.8-flash",
+  "steps": 4,
+  "max_steps": 18,
+  "termination": "STOPPED",
+  "model_error": null,
+  "elapsed_wall_seconds": 7.166
+}

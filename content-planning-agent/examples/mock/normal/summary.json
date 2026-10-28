@@ -1,0 +1,26 @@
+{
+  "case": "normal",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "deadline_not_exceeded": true,
+        "save_matches_spent": true
+      },
+      "actual": "COMPLETED",
+      "termination": "FINISHED",
+      "strategy": "premium",
+      "spent_units": "12.00",
+      "steps": 8,
+      "plan_id": "6559e865-b7aa-4637-8a39-65a45b33b390",
+      "model_error": null
+    }
+  ]
+}

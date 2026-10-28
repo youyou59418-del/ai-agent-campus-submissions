@@ -1,0 +1,33 @@
+{
+  "case": "duplicate",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "expected": "DRAFT_SAVED",
+      "actual": "DRAFT_SAVED",
+      "status": "COMPLETED",
+      "termination": "FINISHED",
+      "steps": 6,
+      "draft_count": 1,
+      "draft_id": "2019c086-d7d6-46b5-845d-ba81f011ada9",
+      "suggested_slot": "2026-11-02T19:00:00+08:00",
+      "model_error": null
+    },
+    {
+      "round": 2,
+      "passed": true,
+      "expected": "DRAFT_SAVED",
+      "actual": "DRAFT_SAVED",
+      "status": "COMPLETED",
+      "termination": "FINISHED",
+      "steps": 5,
+      "draft_count": 1,
+      "draft_id": "2019c086-d7d6-46b5-845d-ba81f011ada9",
+      "suggested_slot": "2026-11-02T19:00:00+08:00",
+      "model_error": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-10-28T14:47:17.195346+00:00",
+  "mode": "mock",
+  "trace_runs_checked": 17,
+  "passed": true,
+  "errors": [],
+  "usage_for_this_suite": {
+    "api_calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "fee_boundary": "Synthetic business units/minutes independently checked; API tokens are separate and do not identify free/billed usage."
+}

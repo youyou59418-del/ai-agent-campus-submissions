@@ -1,0 +1,78 @@
+{
+  "generated_at_utc": "2026-10-28T11:50:37.011652+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mock_boundary": null,
+  "input": {
+    "request_id": "case-step-limit",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M01",
+        "include_supplement": false,
+        "reason": "读取素材 M01 元数据以开始审核"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "秋日剪辑教程",
+          "copyright_confirmed": true,
+          "consent_confirmed": true
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "读取素材 M01 元数据以开始审核",
+      "next_action": "STEP_LIMIT"
+    }
+  ],
+  "result": {
+    "request_id": "case-step-limit",
+    "status": "INCOMPLETE",
+    "termination": "STEP_LIMIT",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "UNKNOWN",
+        "risk_reasons": [],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": null,
+        "pending_items": [],
+        "outcome": "INCOMPLETE",
+        "draft_save_status": "NOT_ATTEMPTED",
+        "draft": null,
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 1,
+    "max_steps": 1,
+    "model_error": null,
+    "elapsed_seconds": 1.78
+  },
+  "usage": {
+    "prompt_tokens": 1168,
+    "completion_tokens": 62,
+    "api_calls": 1
+  },
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "user-selected model; stop on quota error; console free-only state unverified"
+}

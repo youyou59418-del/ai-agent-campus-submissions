@@ -1,0 +1,24 @@
+{
+  "case": "missing_both",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "no_model_calls": true
+      },
+      "actual": "NEEDS_INPUT",
+      "termination": "MISSING_INPUT",
+      "strategy": null,
+      "spent_units": "0.00",
+      "steps": 0,
+      "plan_id": null,
+      "model_error": null
+    }
+  ]
+}

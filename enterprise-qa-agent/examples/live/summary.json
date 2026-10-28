@@ -1,0 +1,349 @@
+{
+  "mode": "live",
+  "total_cases": 14,
+  "passed": 14,
+  "cases": [
+    {
+      "case": "clear_answer",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 5,
+          "model_error": null,
+          "cited_documents": [
+            "D03"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "conflict",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "both_conflicting_originals": true,
+            "asks_applicability": true
+          },
+          "task_status": "CONFLICT",
+          "steps": 7,
+          "model_error": null,
+          "cited_documents": [
+            "D01",
+            "D02"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "outside_corpus",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "no_fabricated_citation": true
+          },
+          "task_status": "INSUFFICIENT_EVIDENCE",
+          "steps": 3,
+          "model_error": null,
+          "cited_documents": []
+        }
+      ]
+    },
+    {
+      "case": "paraphrase",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true,
+            "query_improved": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 7,
+          "model_error": null,
+          "cited_documents": [
+            "D01"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "context_followup",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 5,
+          "model_error": null,
+          "cited_documents": [
+            "D03"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "context_missing",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "no_fabricated_citation": true
+          },
+          "task_status": "NEEDS_CLARIFICATION",
+          "steps": 4,
+          "model_error": null,
+          "cited_documents": []
+        }
+      ]
+    },
+    {
+      "case": "search_failure_once",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true,
+            "observed_tool_error": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 6,
+          "model_error": null,
+          "cited_documents": [
+            "D03"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "read_failure_once",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true,
+            "observed_tool_error": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 5,
+          "model_error": null,
+          "cited_documents": [
+            "D03"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "permanent_failure",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "no_fabricated_citation": true,
+            "observed_tool_error": true
+          },
+          "task_status": "TOOL_FAILURE",
+          "steps": 6,
+          "model_error": null,
+          "cited_documents": []
+        }
+      ]
+    },
+    {
+      "case": "single_policy",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 5,
+          "model_error": null,
+          "cited_documents": [
+            "D01"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "document_replacement",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "fresh_fact": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 9,
+          "model_error": null,
+          "cited_documents": [
+            "D01"
+          ]
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "fresh_fact": true,
+            "changed_with_source": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 10,
+          "model_error": null,
+          "cited_documents": [
+            "D01"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "conflict_disappears",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "both_conflicting_originals": true,
+            "asks_applicability": true
+          },
+          "task_status": "CONFLICT",
+          "steps": 8,
+          "model_error": null,
+          "cited_documents": [
+            "D01",
+            "D02"
+          ]
+        },
+        {
+          "round": 2,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "conflict_not_invented": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 7,
+          "model_error": null,
+          "cited_documents": [
+            "D01",
+            "D02"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "stale_during_run",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "expected_original_fact": true,
+            "read_again": true
+          },
+          "task_status": "ANSWERED",
+          "steps": 6,
+          "model_error": null,
+          "cited_documents": [
+            "D03"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "step_limit",
+      "mode": "live",
+      "passed": true,
+      "rounds": [
+        {
+          "round": 1,
+          "passed": true,
+          "checks": {
+            "expected_status": true,
+            "bounded_steps": true,
+            "no_fabricated_citation": true,
+            "explicit_limit": true
+          },
+          "task_status": "INCOMPLETE",
+          "steps": 1,
+          "model_error": null,
+          "cited_documents": []
+        }
+      ]
+    }
+  ]
+}

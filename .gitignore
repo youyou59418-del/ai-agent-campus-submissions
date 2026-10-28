@@ -1,0 +1,11 @@
+**/__pycache__/
+**/*.py[cod]
+**/.runtime/
+**/.venv/
+**/*.egg-info/
+**/*.sqlite*
+.env
+.env.*
+!.env.example
+*.zip
+*.bundle

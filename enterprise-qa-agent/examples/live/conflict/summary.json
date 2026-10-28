@@ -1,0 +1,24 @@
+{
+  "case": "conflict",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "bounded_steps": true,
+        "both_conflicting_originals": true,
+        "asks_applicability": true
+      },
+      "task_status": "CONFLICT",
+      "steps": 7,
+      "model_error": null,
+      "cited_documents": [
+        "D01",
+        "D02"
+      ]
+    }
+  ]
+}

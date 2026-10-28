@@ -1,0 +1,28 @@
+{
+  "case": "partial_success",
+  "mode": "live",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "deadline_not_exceeded": true,
+        "save_matches_spent": true,
+        "partial_not_faked": true,
+        "adjusted_strategy": true
+      },
+      "actual": "COMPLETED",
+      "termination": "FINISHED",
+      "strategy": "economy",
+      "spent_units": "7.00",
+      "steps": 10,
+      "plan_id": "c676425f-9fb9-411e-a7cc-d98adb4ee669",
+      "model_error": null
+    }
+  ]
+}

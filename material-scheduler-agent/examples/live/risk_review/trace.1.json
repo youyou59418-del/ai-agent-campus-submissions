@@ -1,0 +1,171 @@
+{
+  "generated_at_utc": "2026-10-28T11:50:01.407937+00:00",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "provider_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mock_boundary": null,
+  "input": {
+    "request_id": "case-risk-review",
+    "items": [
+      {
+        "material_id": "M04",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "hard_requirement": true,
+        "channel": "xiaoying",
+        "approved_slot": null
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M04",
+        "include_supplement": false,
+        "reason": "读取素材 M04 元数据以开始审核"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "人物采访",
+          "copyright_confirmed": true,
+          "consent_confirmed": "unknown"
+        },
+        "supplement_checked": false,
+        "supplement_available": false
+      },
+      "decision_basis": "读取素材 M04 元数据以开始审核",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "model": "qwen3.8-27b",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M04",
+        "reason": "审核 M04 是否符合发布规则"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "NEEDS_REVIEW",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "field": "consent_confirmed",
+            "severity": "review",
+            "reason": "出镜授权不明确，需要人工审核"
+          }
+        ],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "审核 M04 是否符合发布规则",
+      "next_action": "read_material"
+    },
+    {
+      "step": 3,
+      "model": "qwen3.8-27b",
+      "tool": "read_material",
+      "arguments": {
+        "material_id": "M04",
+        "include_supplement": true,
+        "reason": "consent_confirmed 为 unknown，补查补充资料以确认授权状态"
+      },
+      "observation": {
+        "ok": true,
+        "material": {
+          "title": "人物采访",
+          "copyright_confirmed": true,
+          "consent_confirmed": "unknown"
+        },
+        "supplement_checked": true,
+        "supplement_available": false
+      },
+      "decision_basis": "consent_confirmed 为 unknown，补查补充资料以确认授权状态",
+      "next_action": "check_rules"
+    },
+    {
+      "step": 4,
+      "model": "qwen3.8-27b",
+      "tool": "check_rules",
+      "arguments": {
+        "material_id": "M04",
+        "reason": "补查后重新审核 M04"
+      },
+      "observation": {
+        "ok": true,
+        "review_status": "NEEDS_REVIEW",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "field": "consent_confirmed",
+            "severity": "review",
+            "reason": "出镜授权不明确，需要人工审核"
+          }
+        ],
+        "rules_version": "synthetic-v1"
+      },
+      "decision_basis": "补查后重新审核 M04",
+      "next_action": "finish"
+    },
+    {
+      "step": 5,
+      "model": "qwen3.8-27b",
+      "tool": "finish",
+      "arguments": {
+        "reason": "M04 审核结果为 NEEDS_REVIEW（出镜授权不明确），无法保存草稿，需人工审核；所有素材已处理完毕。"
+      },
+      "observation": {
+        "ok": true,
+        "code": "FINISHED"
+      },
+      "decision_basis": "M04 审核结果为 NEEDS_REVIEW（出镜授权不明确），无法保存草稿，需人工审核；所有素材已处理完毕。",
+      "next_action": "FINISHED"
+    }
+  ],
+  "result": {
+    "request_id": "case-risk-review",
+    "status": "COMPLETED",
+    "termination": "FINISHED",
+    "items": [
+      {
+        "material_id": "M04",
+        "review_status": "NEEDS_REVIEW",
+        "risk_reasons": [
+          {
+            "rule_id": "R03",
+            "field": "consent_confirmed",
+            "severity": "review",
+            "reason": "出镜授权不明确，需要人工审核"
+          }
+        ],
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": null,
+        "pending_items": [
+          "consent_confirmed"
+        ],
+        "outcome": "NEEDS_REVIEW",
+        "draft_save_status": "NOT_ATTEMPTED",
+        "draft": null,
+        "error": null,
+        "published": false
+      }
+    ],
+    "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+    "mode": "live",
+    "model": "qwen3.8-27b",
+    "steps": 5,
+    "max_steps": 24,
+    "model_error": null,
+    "elapsed_seconds": 11.967
+  },
+  "usage": {
+    "prompt_tokens": 7148,
+    "completion_tokens": 273,
+    "api_calls": 5
+  },
+  "model_switches": [],
+  "free_only_control": null,
+  "quota_policy": "user-selected model; stop on quota error; console free-only state unverified"
+}

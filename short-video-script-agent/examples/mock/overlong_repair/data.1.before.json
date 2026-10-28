@@ -1,0 +1,143 @@
+{
+  "materials.json": {
+    "notice": "Synthetic product facts. No performance data or real media files.",
+    "topics": {
+      "subtitle": {
+        "aliases": [
+          "字幕",
+          "给画面加字",
+          "给视频配字",
+          "视频加字",
+          "屏幕文字"
+        ],
+        "canonical": "字幕"
+      },
+      "cover": {
+        "aliases": [
+          "封面",
+          "视频头图"
+        ],
+        "canonical": "封面"
+      }
+    },
+    "materials": [
+      {
+        "source_id": "P01",
+        "version_date": "2026-10-20",
+        "topic_key": "subtitle",
+        "title": "字幕功能素材",
+        "facts": [
+          {
+            "fact_id": "F1",
+            "text": "支持字幕。",
+            "approved": true
+          }
+        ]
+      },
+      {
+        "source_id": "P02",
+        "version_date": "2026-10-18",
+        "topic_key": "cover",
+        "title": "封面功能素材",
+        "facts": [
+          {
+            "fact_id": "F1",
+            "text": "支持自定义封面。",
+            "approved": true
+          }
+        ]
+      }
+    ]
+  },
+  "brand_rules.json": {
+    "version": "synthetic-brand-v1",
+    "notice": "Synthetic rules and timing heuristic, not actual brand policy or TTS measurements.",
+    "speech_units_per_second": 4,
+    "minimum_scene_seconds": 2,
+    "minimum_scenes": 3,
+    "maximum_scenes": 6,
+    "required_parts": [
+      "hook",
+      "fact",
+      "cta"
+    ],
+    "forbidden_phrases": [
+      "效率提升80%",
+      "100%",
+      "行业第一",
+      "绝对",
+      "最强"
+    ],
+    "required_fact_citations": true
+  },
+  "expressions.json": {
+    "notice": "Reviewed synthetic expression bank. Model arranges these and exact source facts; no free-form factual rewriting is accepted.",
+    "titles": {
+      "T_NAT": {
+        "style": "自然",
+        "text": "先看事实，再聊用法"
+      },
+      "T_LIGHT": {
+        "style": "轻松",
+        "text": "一个小需求，先别急着下结论"
+      },
+      "T_PRO": {
+        "style": "专业",
+        "text": "从素材事实出发，整理创作思路"
+      }
+    },
+    "speech": {
+      "H_NAT": {
+        "style": "自然",
+        "part": "hook",
+        "text": "先说一个小需求，看看素材里明确写了什么。"
+      },
+      "H_LIGHT": {
+        "style": "轻松",
+        "part": "hook",
+        "text": "别急着下结论，我们先把这件事说清楚。"
+      },
+      "H_PRO": {
+        "style": "专业",
+        "part": "hook",
+        "text": "先核对素材中的功能事实，再讨论表达。"
+      },
+      "B_NAT": {
+        "style": "自然",
+        "part": "bridge",
+        "text": "把需求说清楚，再安排画面与文字。"
+      },
+      "B_LIGHT": {
+        "style": "轻松",
+        "part": "bridge",
+        "text": "少一点堆叠，先留出看清楚的空间。"
+      },
+      "B_PRO": {
+        "style": "专业",
+        "part": "bridge",
+        "text": "本段仅展示已确认信息，不推断使用效果。"
+      },
+      "C_NAT": {
+        "style": "自然",
+        "part": "cta",
+        "text": "你会怎样安排这段表达？欢迎说说你的想法。"
+      },
+      "C_LIGHT": {
+        "style": "轻松",
+        "part": "cta",
+        "text": "换成你的创作场景，会怎么安排？"
+      },
+      "C_PRO": {
+        "style": "专业",
+        "part": "cta",
+        "text": "请结合实际需求评估，并核对素材原文。"
+      }
+    },
+    "visuals": {
+      "V_HOOK": "创作者口播引入，不展示未提供的产品界面",
+      "V_FACT": "展示原始素材事实卡片与来源 ID",
+      "V_TEXT": "呈现本段旁白对应文字",
+      "V_CTA": "结尾提问卡片"
+    }
+  }
+}

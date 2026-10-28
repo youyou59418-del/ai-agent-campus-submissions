@@ -1,0 +1,11 @@
+{
+  "version": "synthetic-brand-v1",
+  "notice": "Synthetic rules and timing heuristic, not actual brand policy or TTS measurements.",
+  "speech_units_per_second": 4,
+  "minimum_scene_seconds": 2,
+  "minimum_scenes": 3,
+  "maximum_scenes": 6,
+  "required_parts": ["hook", "fact", "cta"],
+  "forbidden_phrases": ["效率提升80%", "100%", "行业第一", "绝对", "最强"],
+  "required_fact_citations": true
+}

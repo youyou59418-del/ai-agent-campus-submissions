@@ -1,0 +1,25 @@
+name: Verify all projects
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [material-scheduler-agent, content-planning-agent, enterprise-qa-agent, short-video-script-agent]
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python verify_all.py --project ${{ matrix.project }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-${{ matrix.project }}-${{ matrix.python }}
+          path: |
+            examples/release-verification/
+            ${{ matrix.project }}/examples/verification/

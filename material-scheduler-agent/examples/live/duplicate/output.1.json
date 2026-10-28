@@ -1,0 +1,42 @@
+{
+  "request_id": "case-duplicate",
+  "status": "COMPLETED",
+  "termination": "FINISHED",
+  "items": [
+    {
+      "material_id": "M01",
+      "review_status": "APPROVED",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-02T18:00:00+08:00",
+      "suggested_slot": "2026-11-02T19:00:00+08:00",
+      "pending_items": [
+        "confirm_alternative_slot"
+      ],
+      "outcome": "DRAFT_SAVED",
+      "draft_save_status": "SAVED",
+      "draft": {
+        "draft_id": "2019c086-d7d6-46b5-845d-ba81f011ada9",
+        "request_id": "case-duplicate",
+        "material_id": "M01",
+        "channel": "xiaoying",
+        "requested_slot": "2026-11-02T18:00:00+08:00",
+        "suggested_slot": "2026-11-02T19:00:00+08:00",
+        "hard_requirement": true,
+        "requires_confirmation": true,
+        "status": "PENDING_CONFIRMATION",
+        "approval_source": null,
+        "published": false,
+        "revision": 1
+      },
+      "error": null,
+      "published": false
+    }
+  ],
+  "notice": "Only local drafts. COMPLETED means the review run ended; it does not mean publication or user confirmation.",
+  "mode": "live",
+  "model": "qwen3.8-27b",
+  "steps": 6,
+  "max_steps": 24,
+  "model_error": null,
+  "elapsed_seconds": 10.812
+}

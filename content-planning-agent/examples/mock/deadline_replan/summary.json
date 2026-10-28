@@ -1,0 +1,26 @@
+{
+  "case": "deadline_replan",
+  "mode": "mock",
+  "passed": true,
+  "rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "never_published": true,
+        "ledger_sum": true,
+        "budget_not_exceeded": true,
+        "deadline_not_exceeded": true,
+        "save_matches_spent": true
+      },
+      "actual": "COMPLETED",
+      "termination": "FINISHED",
+      "strategy": "economy",
+      "spent_units": "8.00",
+      "steps": 10,
+      "plan_id": "446e4dff-f178-4ad1-9190-6d7b12056a99",
+      "model_error": null
+    }
+  ]
+}

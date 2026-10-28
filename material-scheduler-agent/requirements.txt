@@ -1,0 +1,2 @@
+# Python >=3.11. Runtime and tests use only the standard library.
+# Optional installation: python -m pip install -e .
