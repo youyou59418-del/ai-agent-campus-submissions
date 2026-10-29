@@ -1,36 +1,38 @@
-# AI Agent 校招项目
+# 第 1 题：素材审核与发布排期 Agent
 
-[自动化检查](https://github.com/youyou59418-del/ai-agent-campus-submissions/actions/workflows/verify.yml)
+[项目 README](material-scheduler-agent/README.md) · [GitHub Actions](https://github.com/youyou59418-del/ai-agent-campus-submissions/actions/workflows/verify.yml)
 
-四份独立可运行的项目实现，覆盖业务工具、真实模型动作循环、可执行测试及实际输入输出。每题在各自目录内保留 README、src、tests、examples、data、docs、依赖文件和环境变量示例。
+本仓库提交第 1 题，实现素材审核、时段冲突处理、待确认草稿、重复请求幂等及保存失败处理。所有代码、合成资料、可执行测试、实际输入输出和 Trace 均位于同一仓库。
 
-## 评审导航
+## 评审入口
 
-| 选题 | 项目入口 | 核心验证 | 工程测试 | 离线 / 真实模式场景 |
-|---|---|---|---:|---|
-| 素材审核与发布排期 Agent | [material-scheduler-agent](material-scheduler-agent/README.md) | 风险审核、时间冲突、确认边界与草稿幂等 | 58 | 13 / 13 |
-| 内容任务规划 Agent | [content-planning-agent](content-planning-agent/README.md) | 预算与截止时间、失败费用、部分成功与故障续跑 | 59 | 15 / 15 |
-| 企业知识问答 Agent | [enterprise-qa-agent](enterprise-qa-agent/README.md) | 检索改进、完整原文引用、冲突查证与资料不足处理 | 60 | 14 / 14 |
-| 短视频脚本 Agent | [short-video-script-agent](short-video-script-agent/README.md) | 事实来源、分镜时长、品牌检查与版本修正 | 61 | 16 / 16 |
+- [环境、安装与运行](material-scheduler-agent/README.md)
+- [需求和成功标准](material-scheduler-agent/docs/01-requirements.md)
+- [动态决策与工程约束](material-scheduler-agent/docs/02-solution.md)
+- [实际验证结果](material-scheduler-agent/docs/03-evaluation.md)
+- [AI 辅助范围与人工参与](material-scheduler-agent/docs/04-ai-usage.md)
+- [工程复盘](material-scheduler-agent/docs/05-retrospective.md)
 
-## 环境与一键验证
+## 一键运行
 
-Python 3.11+，运行和测试仅使用标准库，无第三方运行依赖。
+Python 3.11+，运行和测试仅使用标准库。
 
 ```powershell
 git clone https://github.com/youyou59418-del/ai-agent-campus-submissions.git
 cd ai-agent-campus-submissions
 python verify_all.py
+cd material-scheduler-agent
+python run.py --mode mock --input examples/mock/conflict/input.json
 ```
 
-也可在任一项目目录运行 python verify.py。真实模型材料为已实际执行的 Trace；一键验证与 CI 仅重新执行离线测试并静态核对现有真实记录，不发起新的模型请求或使用密钥。
+## 验证
 
-## 验证口径
+58 项工程测试、13 组离线场景及 13 组真实模型场景通过。真实模式实测 qwen3.8-27b，当前材料包含 15 轮记录，实际工具选择、参数、观察、后续动作和简要依据均保存在 examples/live/。
 
-四题共 238 项工程测试、58 组离线场景和 58 组真实模式场景。真实模式中内容规划与脚本项目各有三组缺参前置校验，未调用模型。各题动态决策、正常与异常路径、真实模型用量、失败修正及已知限制均在 docs/03-evaluation.md 与 examples/ 内记录。
+一键验证与 CI 重新执行离线测试并静态审计已有真实模型记录，不使用密钥或发起新的模型请求。GitHub Actions 使用 Python 3.11 / 3.13，实时结果见工作流页面。
 
-## AI 辅助与工程边界
+## 数据与边界
 
-实现、合成资料、测试与文档使用 AI 编程工具辅助；人工参与需求、模型与环境配置和交付要求。每题 docs/04-ai-usage.md 如实记录使用范围和人工参与。Mock 不代表真实模型效果；所有业务资料均为合成。脚本项目使用受限表达库，知识问答使用抽取式引用，预算和时长均有明确的模拟或估算口径。
+实现、合成资料、测试与文档使用 AI 编程工具辅助；人工参与需求、模型与环境配置、交付要求确认。完整记录见项目内 docs/04-ai-usage.md。
 
-自动化检查采用 Python 3.11 / 3.13，逐题运行离线测试和证据审计。CI 的实时状态以 Actions 为准。
+资料和规则为合成数据，只保存本地草稿，不接真实发布。替代硬性时段需确认，保存失败明确返回失败。Mock 仅证明流程，真实决策以实际 Trace 为依据；生产能力与已知限制在评估文档中说明。

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T14:47:21.070701+00:00",
+  "generated_at_utc": "2026-10-29T04:00:22.349243+00:00",
   "passed": true,
   "projects": [
     {
@@ -23,85 +23,11 @@
       "offline_scenarios": 13,
       "recorded_live_scenarios": 13,
       "recorded_trace_runs": 15
-    },
-    {
-      "project": "content-planning-agent",
-      "passed": true,
-      "commands": [
-        {
-          "name": "verify",
-          "exit_code": 0
-        },
-        {
-          "name": "audit-mock",
-          "exit_code": 0
-        },
-        {
-          "name": "audit-recorded-live",
-          "exit_code": 0
-        }
-      ],
-      "unit_tests": 59,
-      "offline_scenarios": 15,
-      "recorded_live_scenarios": 15,
-      "recorded_trace_runs": 17
-    },
-    {
-      "project": "enterprise-qa-agent",
-      "passed": true,
-      "commands": [
-        {
-          "name": "verify",
-          "exit_code": 0
-        },
-        {
-          "name": "audit-mock",
-          "exit_code": 0
-        },
-        {
-          "name": "audit-recorded-live",
-          "exit_code": 0
-        },
-        {
-          "name": "retrieval-benchmark",
-          "exit_code": 0
-        }
-      ],
-      "unit_tests": 60,
-      "offline_scenarios": 14,
-      "recorded_live_scenarios": 14,
-      "recorded_trace_runs": 16
-    },
-    {
-      "project": "short-video-script-agent",
-      "passed": true,
-      "commands": [
-        {
-          "name": "verify",
-          "exit_code": 0
-        },
-        {
-          "name": "audit-mock",
-          "exit_code": 0
-        },
-        {
-          "name": "audit-recorded-live",
-          "exit_code": 0
-        },
-        {
-          "name": "validate-editable-export",
-          "exit_code": 0
-        }
-      ],
-      "unit_tests": 61,
-      "offline_scenarios": 16,
-      "recorded_live_scenarios": 16,
-      "recorded_trace_runs": 18
     }
   ],
-  "unit_tests_total": 238,
-  "offline_scenarios_total": 58,
-  "recorded_live_scenarios_total": 58,
+  "unit_tests_total": 58,
+  "offline_scenarios_total": 13,
+  "recorded_live_scenarios_total": 13,
   "live_api_calls_during_release_validation": 0,
   "boundary": "Offline execution plus static auditing of previously recorded real model traces."
 }

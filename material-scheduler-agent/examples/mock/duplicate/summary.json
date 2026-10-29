@@ -12,7 +12,7 @@
       "termination": "FINISHED",
       "steps": 6,
       "draft_count": 1,
-      "draft_id": "080cfcac-0bb9-43bd-a78d-4983716f33d6",
+      "draft_id": "44b0b011-5f5c-4086-b598-abeb3e3ac381",
       "suggested_slot": "2026-11-02T19:00:00+08:00",
       "model_error": null
     },
@@ -25,7 +25,7 @@
       "termination": "FINISHED",
       "steps": 5,
       "draft_count": 1,
-      "draft_id": "080cfcac-0bb9-43bd-a78d-4983716f33d6",
+      "draft_id": "44b0b011-5f5c-4086-b598-abeb3e3ac381",
       "suggested_slot": "2026-11-02T19:00:00+08:00",
       "model_error": null
     }

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T14:47:11.916671+00:00",
+  "generated_at_utc": "2026-10-29T04:00:21.231964+00:00",
   "mode": "mock",
   "model": "offline-handwritten-policy",
   "provider_base_url": null,
@@ -145,7 +145,7 @@
         "ok": true,
         "code": "SAVED",
         "draft": {
-          "draft_id": "4e06dda4-c2ab-4517-8ecd-2d14c6a9ff2e",
+          "draft_id": "f48f7509-f794-4db2-b50e-2e8762c077da",
           "request_id": "case-multi",
           "material_id": "M01",
           "channel": "xiaoying",
@@ -251,7 +251,7 @@
             "slot": "2026-11-02T19:00:00+08:00",
             "available": false,
             "conflicts": [
-              "draft:4e06dda4-c2ab-4517-8ecd-2d14c6a9ff2e"
+              "draft:f48f7509-f794-4db2-b50e-2e8762c077da"
             ]
           },
           {
@@ -285,7 +285,7 @@
         "ok": true,
         "code": "SAVED",
         "draft": {
-          "draft_id": "48721cbd-0a2f-4922-a1b5-7acd923d593e",
+          "draft_id": "81e23e74-ad60-4936-aefb-ca6d65869de8",
           "request_id": "case-multi",
           "material_id": "M05",
           "channel": "xiaoying",
@@ -334,7 +334,7 @@
         "outcome": "DRAFT_SAVED",
         "draft_save_status": "SAVED",
         "draft": {
-          "draft_id": "4e06dda4-c2ab-4517-8ecd-2d14c6a9ff2e",
+          "draft_id": "f48f7509-f794-4db2-b50e-2e8762c077da",
           "request_id": "case-multi",
           "material_id": "M01",
           "channel": "xiaoying",
@@ -362,7 +362,7 @@
         "outcome": "DRAFT_SAVED",
         "draft_save_status": "SAVED",
         "draft": {
-          "draft_id": "48721cbd-0a2f-4922-a1b5-7acd923d593e",
+          "draft_id": "81e23e74-ad60-4936-aefb-ca6d65869de8",
           "request_id": "case-multi",
           "material_id": "M05",
           "channel": "xiaoying",
@@ -385,7 +385,7 @@
     "steps": 11,
     "max_steps": 24,
     "model_error": null,
-    "elapsed_seconds": 0.02
+    "elapsed_seconds": 0.017
   },
   "usage": null,
   "model_switches": [],

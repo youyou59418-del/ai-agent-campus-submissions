@@ -17,7 +17,7 @@
           "termination": "FINISHED",
           "steps": 5,
           "draft_count": 1,
-          "draft_id": "c70500b0-07c9-4451-96da-6153f70e4ad8",
+          "draft_id": "dbdb7432-a926-4710-90df-bba2c3cd42a8",
           "suggested_slot": "2026-11-02T17:00:00+08:00",
           "model_error": null
         }
@@ -97,7 +97,7 @@
           "termination": "FINISHED",
           "steps": 6,
           "draft_count": 1,
-          "draft_id": "6ce345ec-d5da-4b47-8a91-b559de2bec53",
+          "draft_id": "3bdaebc3-e711-48d1-831a-81633f8606cd",
           "suggested_slot": "2026-11-02T19:00:00+08:00",
           "model_error": null
         }
@@ -117,7 +117,7 @@
           "termination": "FINISHED",
           "steps": 6,
           "draft_count": 1,
-          "draft_id": "080cfcac-0bb9-43bd-a78d-4983716f33d6",
+          "draft_id": "44b0b011-5f5c-4086-b598-abeb3e3ac381",
           "suggested_slot": "2026-11-02T19:00:00+08:00",
           "model_error": null
         },
@@ -130,7 +130,7 @@
           "termination": "FINISHED",
           "steps": 5,
           "draft_count": 1,
-          "draft_id": "080cfcac-0bb9-43bd-a78d-4983716f33d6",
+          "draft_id": "44b0b011-5f5c-4086-b598-abeb3e3ac381",
           "suggested_slot": "2026-11-02T19:00:00+08:00",
           "model_error": null
         }
@@ -170,7 +170,7 @@
           "termination": "FINISHED",
           "steps": 7,
           "draft_count": 1,
-          "draft_id": "9bf56fa5-5675-4231-b24a-a468833fc79b",
+          "draft_id": "8d48caa1-7940-4966-8ac8-0407afa36e77",
           "suggested_slot": "2026-11-02T17:00:00+08:00",
           "model_error": null
         }
@@ -190,7 +190,7 @@
           "termination": "FINISHED",
           "steps": 6,
           "draft_count": 1,
-          "draft_id": "cf78361a-7e5b-4df7-9769-6763d80d0060",
+          "draft_id": "d77ede35-b780-4c82-8c29-3c6eacb81764",
           "suggested_slot": "2026-11-02T19:00:00+08:00",
           "model_error": null
         }
@@ -210,7 +210,7 @@
           "termination": "FINISHED",
           "steps": 6,
           "draft_count": 1,
-          "draft_id": "4d109aab-0f17-4939-b38c-5d9e5be85273",
+          "draft_id": "6819a6e8-e069-4221-9cc8-f22786e0c9dd",
           "suggested_slot": "2026-11-02T19:00:00+08:00",
           "model_error": null
         },
@@ -223,7 +223,7 @@
           "termination": "FINISHED",
           "steps": 6,
           "draft_count": 1,
-          "draft_id": "4d109aab-0f17-4939-b38c-5d9e5be85273",
+          "draft_id": "6819a6e8-e069-4221-9cc8-f22786e0c9dd",
           "suggested_slot": "2026-11-02T20:00:00+08:00",
           "model_error": null
         }
@@ -283,7 +283,7 @@
           "termination": "FINISHED",
           "steps": 11,
           "draft_count": 2,
-          "draft_id": "4e06dda4-c2ab-4517-8ecd-2d14c6a9ff2e",
+          "draft_id": "f48f7509-f794-4db2-b50e-2e8762c077da",
           "suggested_slot": "2026-11-02T19:00:00+08:00",
           "model_error": null
         }

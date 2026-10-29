@@ -13,7 +13,7 @@
       "outcome": "DRAFT_SAVED",
       "draft_save_status": "SAVED",
       "draft": {
-        "draft_id": "9bf56fa5-5675-4231-b24a-a468833fc79b",
+        "draft_id": "8d48caa1-7940-4966-8ac8-0407afa36e77",
         "request_id": "case-supplement",
         "material_id": "M07",
         "channel": "xiaoying",
@@ -36,5 +36,5 @@
   "steps": 7,
   "max_steps": 24,
   "model_error": null,
-  "elapsed_seconds": 0.006
+  "elapsed_seconds": 0.007
 }

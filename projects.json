@@ -9,38 +9,5 @@
     "demo": "examples/mock/conflict/input.json",
     "focus": "风险审核、时间冲突、确认边界与草稿幂等",
     "improvements": "保存前冲突复查、确认状态与幂等、阻止提前结束、占用变化后同 ID 重排"
-  },
-  {
-    "slug": "content-planning-agent",
-    "title": "内容任务规划 Agent",
-    "tests": 59,
-    "cases": 15,
-    "traces": 17,
-    "model": "qwen3.8-27b",
-    "demo": "examples/mock/budget_replan/input.json",
-    "focus": "预算与截止时间、失败费用、部分成功与故障续跑",
-    "improvements": "初始方案估算后重规划、追加费用账本、失败续跑和保存前复核节点状态修正"
-  },
-  {
-    "slug": "enterprise-qa-agent",
-    "title": "企业知识问答 Agent",
-    "tests": 60,
-    "cases": 14,
-    "traces": 16,
-    "model": "qwen3.8-flash",
-    "demo": "examples/mock/conflict/input.json",
-    "focus": "检索改进、完整原文引用、冲突查证与资料不足处理",
-    "improvements": "完整引文验证、同日期内容新鲜度、冲突覆盖、最终整体语料哈希校验"
-  },
-  {
-    "slug": "short-video-script-agent",
-    "title": "短视频脚本 Agent",
-    "tests": 61,
-    "cases": 16,
-    "traces": 18,
-    "model": "qwen3.8-flash",
-    "demo": "examples/mock/overlong_repair/input.1.json",
-    "focus": "事实来源、分镜时长、品牌检查与版本修正",
-    "improvements": "同版本双检查、规则快照绑定、禁止无必要改稿、编辑后再校验"
   }
 ]

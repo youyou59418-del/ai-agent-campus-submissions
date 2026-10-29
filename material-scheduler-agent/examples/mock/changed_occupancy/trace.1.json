@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T14:47:11.835740+00:00",
+  "generated_at_utc": "2026-10-29T04:00:21.137372+00:00",
   "mode": "mock",
   "model": "offline-handwritten-policy",
   "provider_base_url": null,
@@ -138,7 +138,7 @@
         "ok": true,
         "code": "SAVED",
         "draft": {
-          "draft_id": "4d109aab-0f17-4939-b38c-5d9e5be85273",
+          "draft_id": "6819a6e8-e069-4221-9cc8-f22786e0c9dd",
           "request_id": "case-changed-occupancy",
           "material_id": "M01",
           "channel": "xiaoying",
@@ -187,7 +187,7 @@
         "outcome": "DRAFT_SAVED",
         "draft_save_status": "SAVED",
         "draft": {
-          "draft_id": "4d109aab-0f17-4939-b38c-5d9e5be85273",
+          "draft_id": "6819a6e8-e069-4221-9cc8-f22786e0c9dd",
           "request_id": "case-changed-occupancy",
           "material_id": "M01",
           "channel": "xiaoying",
@@ -210,7 +210,7 @@
     "steps": 6,
     "max_steps": 24,
     "model_error": null,
-    "elapsed_seconds": 0.008
+    "elapsed_seconds": 0.009
   },
   "usage": null,
   "model_switches": [],

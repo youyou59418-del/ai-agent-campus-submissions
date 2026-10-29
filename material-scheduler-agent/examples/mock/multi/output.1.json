@@ -15,7 +15,7 @@
       "outcome": "DRAFT_SAVED",
       "draft_save_status": "SAVED",
       "draft": {
-        "draft_id": "4e06dda4-c2ab-4517-8ecd-2d14c6a9ff2e",
+        "draft_id": "f48f7509-f794-4db2-b50e-2e8762c077da",
         "request_id": "case-multi",
         "material_id": "M01",
         "channel": "xiaoying",
@@ -43,7 +43,7 @@
       "outcome": "DRAFT_SAVED",
       "draft_save_status": "SAVED",
       "draft": {
-        "draft_id": "48721cbd-0a2f-4922-a1b5-7acd923d593e",
+        "draft_id": "81e23e74-ad60-4936-aefb-ca6d65869de8",
         "request_id": "case-multi",
         "material_id": "M05",
         "channel": "xiaoying",
@@ -66,5 +66,5 @@
   "steps": 11,
   "max_steps": 24,
   "model_error": null,
-  "elapsed_seconds": 0.02
+  "elapsed_seconds": 0.017
 }

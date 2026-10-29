@@ -1,6 +1,6 @@
 # 项目信息
 
-- 选题：素材审核与发布排期 Agent
+- 选题：第 1 题 · 素材审核与发布排期 Agent
 - 仓库：[youyou59418-del/ai-agent-campus-submissions](https://github.com/youyou59418-del/ai-agent-campus-submissions)
 - 项目目录：[material-scheduler-agent](https://github.com/youyou59418-del/ai-agent-campus-submissions/tree/main/material-scheduler-agent)
 - 评审入口：[README.md](README.md)
@@ -17,4 +17,4 @@ python verify.py
 python run.py --mode mock --input examples/mock/conflict/input.json
 ```
 
-真实模型运行与环境变量见 README。真实模型 Trace、合成数据和测试均位于本目录。最终提交文本中的 commit SHA 对应合集仓库的完整代码与验证材料。
+真实模型运行与环境变量见 README。真实模型 Trace、合成数据和测试均位于本目录。最终提交文本中的 commit SHA 对应本仓库的完整代码与验证材料。

@@ -1,11 +1,11 @@
 {
   "passed": true,
-  "files_scanned": 964,
-  "local_links_checked": 161,
+  "files_scanned": 200,
+  "local_links_checked": 51,
   "known_credentials_found": false,
   "problems": [],
-  "unit_tests_total": 238,
-  "offline_scenarios_total": 58,
-  "recorded_live_scenarios_total": 58,
+  "unit_tests_total": 58,
+  "offline_scenarios_total": 13,
+  "recorded_live_scenarios_total": 13,
   "fresh_model_calls_during_release": 0
 }

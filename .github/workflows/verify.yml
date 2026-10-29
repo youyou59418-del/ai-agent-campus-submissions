@@ -1,4 +1,4 @@
-name: Verify all projects
+name: Verify first project
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [material-scheduler-agent, content-planning-agent, enterprise-qa-agent, short-video-script-agent]
+        project: [material-scheduler-agent]
         python: ['3.11', '3.13']
     steps:
       - uses: actions/checkout@v4

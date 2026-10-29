@@ -58,6 +58,6 @@ test_unknown_action_is_bounded (test_scheduler.SchedulerTest.test_unknown_action
 test_unknown_material_requests_information (test_scheduler.SchedulerTest.test_unknown_material_requests_information) ... ok
 
 ----------------------------------------------------------------------
-Ran 58 tests in 0.735s
+Ran 58 tests in 0.781s
 
 OK
